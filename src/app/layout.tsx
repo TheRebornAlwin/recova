@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Advanced EMS pulse technology that sends targeted electrical signals directly into your neck muscles. Feel the tension release in minutes, not hours.",
   icons: {
-    icon: "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf4pRa3LfnI5pftsHlKbCS38YwuzArQJ9v1TWO",
+    icon: "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfVJ9CF0cDRq1IaUousEkQV5YgOpbLT7hxeNmK",
   },
 };
 
