@@ -20,16 +20,37 @@ export default function HeroSection() {
       <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-warm/5 blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 md:py-40 w-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Text column - on mobile: tag first, then image slot, then rest */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center md:text-left min-w-0"
+            className="text-center md:text-left min-w-0 order-1 md:order-1"
           >
             <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-teal-light/60 text-teal-dark text-xs font-semibold tracking-[0.15em] uppercase">
               EMS Pulse Technology
             </div>
+
+            {/* Mobile-only image: shows between tag and headline */}
+            <div className="flex justify-center md:hidden mb-6">
+              <FloatingElement>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-teal/10 rounded-3xl blur-2xl scale-110" />
+                  <div className="relative w-64 h-64 rounded-3xl overflow-hidden shadow-2xl shadow-teal/15">
+                    <Image
+                      src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfc5E7MmPl6tpqe8AgxVJTWrEjFhCHaQ2wXsoy"
+                      alt="NeckRelieve Pulse"
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+              </FloatingElement>
+            </div>
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight tracking-tight mb-6">
               Your neck pain{" "}
               <TextGradient variant="teal">
@@ -65,31 +86,29 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
+          {/* Desktop-only image column */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center min-w-0"
+            className="hidden md:flex justify-center min-w-0 order-2"
           >
             <FloatingElement>
               <div className="relative">
                 <div className="absolute inset-0 bg-teal/10 rounded-3xl blur-2xl scale-110" />
-                <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-teal/15">
+                <div className="relative w-96 h-96 rounded-3xl overflow-hidden shadow-2xl shadow-teal/15">
                   <Image
                     src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfc5E7MmPl6tpqe8AgxVJTWrEjFhCHaQ2wXsoy"
                     alt="NeckRelieve Pulse"
                     width={500}
                     height={500}
                     className="w-full h-full object-cover"
-                    priority
                   />
                 </div>
               </div>
             </FloatingElement>
           </motion.div>
         </div>
-
-
       </div>
     </section>
   );
