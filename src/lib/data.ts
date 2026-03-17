@@ -19,7 +19,7 @@ export const heroProduct: Product = {
   id: "neckrelieve-pulse",
   handle: "neckrelieve-pulse",
   title: "NeckRelieve Pulse",
-  tagline: "Feel the tension release in minutes, not hours",
+  tagline: "Feel the tension release in minutes",
   description:
     "Advanced EMS pulse technology that sends targeted electrical signals directly into your neck muscles. Unlike heat pads or basic massagers, the NeckRelieve Pulse works at the muscular level to break down deep tension from hours of screen time.",
   price: 39.99,

@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Recova | Advanced EMS Neck Pain Relief",
   description:
-    "Advanced EMS pulse technology that sends targeted electrical signals directly into your neck muscles. Feel the tension release in minutes, not hours.",
+    "Advanced EMS pulse technology that sends targeted electrical signals directly into your neck muscles. Feel the tension release in minutes.",
   icons: {
     icon: "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfVJ9CF0cDRq1IaUousEkQV5YgOpbLT7hxeNmK",
   },
