@@ -28,9 +28,9 @@ export const heroProduct: Product = {
     "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf6VlGUQ9zZFbItUxDBl9n3psJj0Rm1V8iP2ef",
     "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfqu1NTvSANYDXpkLJl8fIBQzm26uxZR9PHiO7",
     "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfyhIs6xSwyRmT5N4UxsjMfXha3kb7JeSpnK9Z",
-    "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf7FCHlgoahkXuN67i1KgfSqwl385Cx4c9jret",
-    "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfWnHX3Td7TVsGoIJ1D8Yt5lg6SP09OacNXnFZ",
     "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfqIt4tsANYDXpkLJl8fIBQzm26uxZR9PHiO7o",
+    "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfWnHX3Td7TVsGoIJ1D8Yt5lg6SP09OacNXnFZ",
+    "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf7FCHlgoahkXuN67i1KgfSqwl385Cx4c9jret",
   ],
   features: [
     {
