@@ -1,26 +1,211 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafb;
+  --foreground: #1a1a2e;
+  --soft-white: #ffffff;
+  --light-gray: #f1f5f9;
+  --muted: #94a3b8;
+  --teal: #0d9488;
+  --teal-dark: #0f766e;
+  --teal-light: #ccfbf1;
+  --warm: #f59e0b;
+  --warm-light: #fef3c7;
+  --navy: #1e293b;
+  --slate: #475569;
+
+  --blue-500: #0d9488;
+  --indigo-300: #5eead4;
+  --blue-300: #99f6e4;
+  --violet-200: #f59e0b;
+  --blue-400: #14b8a6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-soft-white: #ffffff;
+  --color-light-gray: #f1f5f9;
+  --color-muted: #94a3b8;
+  --color-teal: #0d9488;
+  --color-teal-dark: #0f766e;
+  --color-teal-light: #ccfbf1;
+  --color-warm: #f59e0b;
+  --color-warm-light: #fef3c7;
+  --color-navy: #1e293b;
+  --color-slate: #475569;
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+
+  --animate-aurora: aurora 60s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 4s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-logo-reveal: logo-reveal 2s ease-out forwards;
+  --animate-spin-slow: spin 20s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logo-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -2px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 10px 25px -5px rgba(13, 148, 136, 0.1),
+    0 8px 10px -6px rgba(13, 148, 136, 0.05);
+}
+
+.section-gradient-teal {
+  background: linear-gradient(
+    180deg,
+    #f8fafb 0%,
+    #f0fdfa 50%,
+    #f8fafb 100%
+  );
+}
+
+.section-gradient-warm {
+  background: linear-gradient(
+    180deg,
+    #f8fafb 0%,
+    #fffbeb 50%,
+    #f8fafb 100%
+  );
+}
+
+.god-ray {
+  background: radial-gradient(
+    ellipse at center bottom,
+    rgba(13, 148, 136, 0.08) 0%,
+    rgba(245, 158, 11, 0.04) 30%,
+    transparent 70%
+  );
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
