@@ -17,7 +17,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="relative glass-card glass-card-hover rounded-2xl overflow-hidden transition-all duration-300">
         <div className="relative aspect-square bg-gradient-to-br from-teal-light/30 to-white overflow-hidden">
           {discount > 0 && (
-            <span className="absolute top-4 left-4 px-3 py-1 bg-teal text-white text-xs font-bold rounded-full z-10">
+            <span className="absolute top-4 right-4 px-3 py-1 bg-teal text-white text-xs font-bold rounded-full z-10">
               -{discount}% OFF
             </span>
           )}

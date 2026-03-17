@@ -27,6 +27,11 @@ export default function ProductPageClient({ product }: { product: Product }) {
   const effectivePrice = product.price * (1 - discount / 100);
   const effectiveQty = tierQuantities[selectedTier];
 
+  const handleTierSelect = (tier: number) => {
+    setSelectedTier(tier);
+    setQuantity(tierQuantities[tier]);
+  };
+
   const handleAddToCart = () => {
     addItem(
       {
@@ -82,7 +87,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
                   <motion.span
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    className="absolute top-5 left-5 px-4 py-1.5 bg-teal text-white text-sm font-bold rounded-full z-10 shadow-lg shadow-teal/20"
+                    className="absolute top-5 right-5 px-4 py-1.5 bg-teal text-white text-sm font-bold rounded-full z-10 shadow-lg shadow-teal/20"
                   >
                     -{discountPct}% OFF
                   </motion.span>
@@ -166,7 +171,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 <VolumeDiscounts
                   basePrice={product.price}
                   selectedTier={selectedTier}
-                  onSelect={setSelectedTier}
+                  onSelect={handleTierSelect}
                 />
               </div>
 
