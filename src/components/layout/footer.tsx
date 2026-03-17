@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
-                src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf4pRa3LfnI5pftsHlKbCS38YwuzArQJ9v1TWO"
+                src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfVJ9CF0cDRq1IaUousEkQV5YgOpbLT7hxeNmK"
                 alt="Recova"
                 width={28}
                 height={28}
