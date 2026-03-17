@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Product } from "@/lib/data";
 import { useCart } from "@/contexts/cart-context";
@@ -86,47 +87,35 @@ export default function ProductPageClient({ product }: { product: Product }) {
                     -{discountPct}% OFF
                   </motion.span>
                 )}
-                {/* Decorative glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-teal/5 via-transparent to-warm/5" />
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-1/3 bg-teal/5 blur-3xl rounded-full" />
-                <div className="relative h-full flex items-center justify-center p-8">
-                  <div className="text-center">
-                    <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 rounded-3xl bg-teal/10 flex items-center justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="48"
-                        height="48"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-teal"
-                      >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                      </svg>
-                    </div>
-                    <p className="text-sm font-medium text-slate">
-                      {product.title} - Image {selectedImage + 1}
-                    </p>
-                  </div>
-                </div>
+                <Image
+                  src={product.images[selectedImage]}
+                  alt={`${product.title} - Image ${selectedImage + 1}`}
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
 
               {/* Thumbnails */}
               <div className="flex gap-3 overflow-x-auto max-w-full pb-1">
-                {product.images.map((_, i) => (
+                {product.images.map((img, i) => (
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
-                    className={`w-[72px] h-[72px] rounded-2xl flex-shrink-0 border-2 transition-all duration-200 cursor-pointer flex items-center justify-center text-xs font-medium ${
+                    className={`w-[72px] h-[72px] rounded-2xl flex-shrink-0 border-2 transition-all duration-200 cursor-pointer overflow-hidden ${
                       selectedImage === i
-                        ? "border-teal bg-teal-light/40 text-teal shadow-md shadow-teal/10"
-                        : "border-transparent bg-light-gray text-slate hover:border-teal/30 hover:bg-teal-light/20"
+                        ? "border-teal shadow-md shadow-teal/10"
+                        : "border-transparent hover:border-teal/30 opacity-70 hover:opacity-100"
                     }`}
                   >
-                    {product.title.split(" ")[0]} {i + 1}
+                    <Image
+                      src={img}
+                      alt={`${product.title} thumbnail ${i + 1}`}
+                      width={72}
+                      height={72}
+                      className="w-full h-full object-cover"
+                    />
                   </button>
                 ))}
               </div>

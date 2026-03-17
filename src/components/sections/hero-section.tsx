@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import MagneticButton from "@/components/ui/magnetic-button";
 import TextGradient from "@/components/ui/text-gradient";
@@ -73,15 +74,15 @@ export default function HeroSection() {
             <FloatingElement>
               <div className="relative">
                 <div className="absolute inset-0 bg-teal/10 rounded-3xl blur-2xl scale-110" />
-                <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl bg-gradient-to-br from-teal-light to-white border border-teal/10 flex items-center justify-center overflow-hidden shadow-lg">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-teal/10 flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal">
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                      </svg>
-                    </div>
-                    <p className="text-sm font-medium text-slate">Product image coming soon</p>
-                  </div>
+                <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-teal/15">
+                  <Image
+                    src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfc5E7MmPl6tpqe8AgxVJTWrEjFhCHaQ2wXsoy"
+                    alt="NeckRelieve Pulse"
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-cover"
+                    priority
+                  />
                 </div>
               </div>
             </FloatingElement>

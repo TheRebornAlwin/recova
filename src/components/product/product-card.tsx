@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import type { Product } from "@/lib/data";
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -14,20 +15,19 @@ export default function ProductCard({ product }: { product: Product }) {
       className="group block"
     >
       <div className="relative glass-card glass-card-hover rounded-2xl overflow-hidden transition-all duration-300">
-        <div className="relative aspect-square bg-gradient-to-br from-teal-light/30 to-white flex items-center justify-center">
+        <div className="relative aspect-square bg-gradient-to-br from-teal-light/30 to-white overflow-hidden">
           {discount > 0 && (
             <span className="absolute top-4 left-4 px-3 py-1 bg-teal text-white text-xs font-bold rounded-full z-10">
               -{discount}% OFF
             </span>
           )}
-          <div className="text-center p-8">
-            <div className="w-16 h-16 mx-auto mb-3 rounded-xl bg-teal/10 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-              </svg>
-            </div>
-            <p className="text-xs text-slate">Image coming soon</p>
-          </div>
+          <Image
+            src={product.images[0]}
+            alt={product.title}
+            width={400}
+            height={400}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
         </div>
 
         <div className="p-5">

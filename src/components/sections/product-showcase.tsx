@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import TextGradient from "@/components/ui/text-gradient";
 import MagneticButton from "@/components/ui/magnetic-button";
@@ -11,15 +12,15 @@ export default function ProductShowcase() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
-            <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-teal-light/40 to-white border border-teal/10 overflow-hidden flex items-center justify-center shadow-lg">
-              <div className="text-center p-8">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-teal/10 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                  </svg>
-                </div>
-                <p className="text-sm text-slate">Product image coming soon</p>
-              </div>
+            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-teal/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-light/20 to-transparent z-10 pointer-events-none" />
+              <Image
+                src={heroProduct.images[0]}
+                alt={heroProduct.title}
+                width={600}
+                height={600}
+                className="w-full h-full object-cover"
+              />
             </div>
           </ScrollReveal>
 
