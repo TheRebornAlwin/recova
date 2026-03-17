@@ -65,7 +65,7 @@ export default function Testimonials() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <ScrollReveal key={i} delay={i * 0.1}>
+            <ScrollReveal key={i} delay={i * 0.1} className="min-w-0">
               <GlassmorphismCard className="h-full">
                 <div className="flex text-warm text-sm mb-3">
                   {Array.from({ length: t.rating }).map((_, j) => (

@@ -76,10 +76,10 @@ export default function ProductPageClient({ product }: { product: Product }) {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* LEFT COLUMN: Images */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="space-y-4"
+              className="space-y-4 min-w-0"
             >
               {/* Main Image */}
               <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-teal-light/40 via-white to-teal-light/20 border border-teal/10 overflow-hidden shadow-lg">
@@ -128,10 +128,10 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
             {/* RIGHT COLUMN: Product Info */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-center md:text-left"
+              className="text-center md:text-left min-w-0"
             >
               {/* Title */}
               <h1 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-navy tracking-tight leading-tight mb-3">
@@ -281,7 +281,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {product.features.map((feature, i) => (
-              <ScrollReveal key={i} delay={i * 0.08}>
+              <ScrollReveal key={i} delay={i * 0.08} className="min-w-0">
                 <GlassmorphismCard className="h-full group">
                   <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-light to-teal/10 flex items-center justify-center text-teal font-bold text-sm mb-5 group-hover:scale-110 transition-transform duration-300">
                     {String(i + 1).padStart(2, "0")}

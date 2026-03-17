@@ -11,7 +11,7 @@ export default function ProductShowcase() {
     <section className="py-24 md:py-36 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-          <ScrollReveal>
+          <ScrollReveal className="min-w-0">
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-teal/10">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-light/20 to-transparent z-10 pointer-events-none" />
               <Image
@@ -24,7 +24,7 @@ export default function ProductShowcase() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.2}>
+          <ScrollReveal delay={0.2} className="min-w-0">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-teal mb-3">
               Featured Product
             </p>

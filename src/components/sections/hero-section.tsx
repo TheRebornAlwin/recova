@@ -25,7 +25,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center md:text-left"
+            className="text-center md:text-left min-w-0"
           >
             <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-teal-light/60 text-teal-dark text-xs font-semibold tracking-[0.15em] uppercase">
               EMS Pulse Technology
@@ -69,7 +69,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center"
+            className="flex justify-center min-w-0"
           >
             <FloatingElement>
               <div className="relative">

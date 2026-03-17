@@ -16,7 +16,7 @@ export default function BrandStory() {
     <section className="py-24 md:py-36 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-          <ScrollReveal>
+          <ScrollReveal className="min-w-0">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-teal mb-3">
               Our Story
             </p>
@@ -41,7 +41,7 @@ export default function BrandStory() {
             </MagneticButton>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.2}>
+          <ScrollReveal delay={0.2} className="min-w-0">
             <div className="grid grid-cols-1 gap-6">
               {stats.map((stat, i) => (
                 <div

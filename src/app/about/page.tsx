@@ -39,14 +39,14 @@ export default function AboutPage() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
-          <ScrollReveal>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-24">
+          <ScrollReveal className="min-w-0">
             <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-teal-light/40 to-white border border-teal/10 flex items-center justify-center">
               <p className="text-sm text-slate">Brand image coming soon</p>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.2}>
+          <ScrollReveal delay={0.2} className="min-w-0">
             <h2 className="text-2xl font-bold text-navy mb-4">
               Born from frustration
             </h2>

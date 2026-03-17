@@ -19,18 +19,18 @@ export default function ScrollReveal({
   className,
 }: ScrollRevealProps) {
   const offsets = {
-    up: { y: 40, x: 0 },
-    down: { y: -40, x: 0 },
-    left: { y: 0, x: 40 },
-    right: { y: 0, x: -40 },
+    up: { y: 40 },
+    down: { y: -40 },
+    left: { y: 20 },
+    right: { y: 20 },
   };
 
   const offset = offsets[direction];
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: offset.y, x: offset.x }}
-      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      initial={{ opacity: 0, y: offset.y }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration, delay, ease: "easeOut" }}
       className={cn(className)}

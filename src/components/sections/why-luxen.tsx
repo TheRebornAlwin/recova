@@ -61,7 +61,7 @@ export default function WhyRecova() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value, i) => (
-            <ScrollReveal key={i} delay={i * 0.1}>
+            <ScrollReveal key={i} delay={i * 0.1} className="min-w-0">
               <GlassmorphismCard className="h-full text-center">
                 <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-teal-light/60 flex items-center justify-center text-teal">
                   {value.icon}
