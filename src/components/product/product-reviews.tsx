@@ -61,11 +61,11 @@ export default function ProductReviews() {
   const avgRating = 4.9;
 
   const ratingDist = [
-    { stars: 5, count: 1072 },
-    { stars: 4, count: 131 },
-    { stars: 3, count: 32 },
-    { stars: 2, count: 9 },
-    { stars: 1, count: 3 },
+    { stars: 5, count: 4738 },
+    { stars: 4, count: 847 },
+    { stars: 3, count: 196 },
+    { stars: 2, count: 54 },
+    { stars: 1, count: 25 },
   ];
   const totalRatings = ratingDist.reduce((sum, r) => sum + r.count, 0);
 
