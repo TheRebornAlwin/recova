@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import type { Product } from "@/lib/data";
 
@@ -17,69 +18,106 @@ export default function ProductTabs({ product }: { product: Product }) {
             key={tab}
             onClick={() => setActive(i)}
             className={cn(
-              "px-4 py-3 text-sm font-medium transition-colors relative cursor-pointer",
-              active === i
-                ? "text-teal"
-                : "text-slate hover:text-navy"
+              "px-5 py-3.5 text-sm font-medium transition-colors relative cursor-pointer",
+              active === i ? "text-teal" : "text-slate hover:text-navy"
             )}
           >
             {tab}
             {active === i && (
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-teal" />
+              <motion.div
+                layoutId="tab-indicator"
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-teal"
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              />
             )}
           </button>
         ))}
       </div>
 
-      <div className="py-6">
+      <div className="py-6 text-sm text-slate leading-relaxed">
         {active === 0 && (
-          <ul className="space-y-2">
+          <motion.ul
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-2.5"
+          >
             {product.specs.map((spec, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-slate">
-                <span className="text-teal mt-0.5">&#8226;</span>
-                {spec}
+              <li key={i} className="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-teal mt-0.5 flex-shrink-0"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>{spec}</span>
               </li>
             ))}
-          </ul>
+          </motion.ul>
         )}
 
         {active === 1 && (
-          <div className="text-sm text-slate space-y-3">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-4"
+          >
             <p>
-              <strong className="text-navy">Processing:</strong> 1-3 business
-              days
+              Due to high demand, orders may take 2-4 weeks to arrive. We ship
+              worldwide with tracking included on every order.
             </p>
             <p>
-              <strong className="text-navy">Standard Shipping:</strong> 7-15
-              business days (worldwide)
+              Free shipping on all orders. No minimum purchase required.
             </p>
             <p>
-              <strong className="text-navy">Free Shipping:</strong> All orders
-              ship free, no minimum required
+              Need help? Email us at{" "}
+              <a
+                href="mailto:shoprecova@gmail.com"
+                className="text-teal hover:underline font-medium"
+              >
+                shoprecova@gmail.com
+              </a>
             </p>
-            <p>
-              <strong className="text-navy">Tracking:</strong> Full tracking
-              number provided via email once shipped
-            </p>
-          </div>
+          </motion.div>
         )}
 
         {active === 2 && (
-          <div className="text-sm text-slate space-y-3">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-4"
+          >
             <p>
-              We stand behind the NeckRelieve Pulse with a{" "}
-              <strong className="text-navy">30-day money-back guarantee</strong>
-              .
+              We truly believe we make some of the best EMS neck relief devices
+              available, and we back that up with a risk-free, ironclad{" "}
+              <strong className="text-navy">30-day money back guarantee</strong>.
             </p>
             <p>
-              If you don't feel a real difference in your pain levels, email us
-              at shoprecova@gmail.com for a full refund. No questions asked.
+              If you don&apos;t have a positive experience for any reason, we
+              will do whatever it takes to make sure you are 100% satisfied with
+              your purchase.
             </p>
             <p>
-              We also offer free replacements for any items that arrive damaged
-              or defective.
+              Contact our friendly support team at{" "}
+              <a
+                href="mailto:shoprecova@gmail.com"
+                className="text-teal hover:underline font-medium"
+              >
+                shoprecova@gmail.com
+              </a>{" "}
+              and we&apos;ll make it right.
             </p>
-          </div>
+          </motion.div>
         )}
       </div>
     </div>

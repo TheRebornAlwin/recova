@@ -9,9 +9,9 @@ interface VolumeDiscountsProps {
 }
 
 const tiers = [
-  { qty: 1, discount: 0, label: "1 Unit", badge: "" },
-  { qty: 2, discount: 10, label: "2 Units", badge: "Save 10%" },
-  { qty: 3, discount: 20, label: "3 Units", badge: "Save 20%" },
+  { qty: 1, discount: 0, label: "Buy 1", badge: "" },
+  { qty: 2, discount: 10, label: "Buy 2", badge: "10% OFF" },
+  { qty: 3, discount: 20, label: "Buy 3", badge: "20% OFF" },
 ];
 
 export default function VolumeDiscounts({
@@ -20,44 +20,42 @@ export default function VolumeDiscounts({
   onSelect,
 }: VolumeDiscountsProps) {
   return (
-    <div className="space-y-3">
-      <h4 className="text-sm font-semibold text-navy">Buy More, Save More</h4>
-      <div className="space-y-2">
+    <div>
+      <h4 className="text-sm font-bold text-navy mb-3">Buy More, Save More</h4>
+      <div className="space-y-2.5">
         {tiers.map((tier, i) => {
           const unitPrice = basePrice * (1 - tier.discount / 100);
-          const totalPrice = unitPrice * tier.qty;
-          const savings = basePrice * tier.qty - totalPrice;
+          const totalSavings = (basePrice - unitPrice) * tier.qty;
+          const isSelected = selectedTier === i;
 
           return (
             <button
               key={i}
               onClick={() => onSelect(i)}
               className={cn(
-                "w-full flex items-center justify-between p-3 rounded-xl border-2 transition-all text-left cursor-pointer",
-                selectedTier === i
-                  ? "border-teal bg-teal-light/30"
-                  : "border-light-gray hover:border-teal/30"
+                "w-full flex items-center justify-between p-4 rounded-2xl border-2 transition-all duration-300 text-left cursor-pointer group",
+                isSelected
+                  ? "border-teal bg-teal-light/30 shadow-[0_2px_12px_rgba(13,148,136,0.12)]"
+                  : "border-light-gray hover:border-teal/40 hover:bg-teal-light/10"
               )}
             >
               <div className="flex items-center gap-3">
                 <div
                   className={cn(
-                    "w-5 h-5 rounded-full border-2 flex items-center justify-center",
-                    selectedTier === i
-                      ? "border-teal"
-                      : "border-muted"
+                    "w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all",
+                    isSelected ? "border-teal" : "border-muted"
                   )}
                 >
-                  {selectedTier === i && (
+                  {isSelected && (
                     <div className="w-2.5 h-2.5 rounded-full bg-teal" />
                   )}
                 </div>
-                <div>
-                  <span className="text-sm font-medium text-navy">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-semibold text-navy">
                     {tier.label}
                   </span>
                   {tier.badge && (
-                    <span className="ml-2 px-2 py-0.5 text-[10px] font-bold bg-teal text-white rounded-full">
+                    <span className="px-2.5 py-0.5 text-[10px] font-bold bg-teal text-white rounded-full leading-normal">
                       {tier.badge}
                     </span>
                   )}
@@ -65,11 +63,12 @@ export default function VolumeDiscounts({
               </div>
               <div className="text-right">
                 <p className="text-sm font-bold text-navy">
-                  ${totalPrice.toFixed(2)}
+                  ${unitPrice.toFixed(2)}
+                  <span className="text-xs font-normal text-muted">each</span>
                 </p>
-                {savings > 0 && (
-                  <p className="text-xs text-teal">
-                    Save ${savings.toFixed(2)}
+                {totalSavings > 0 && (
+                  <p className="text-xs font-semibold text-teal">
+                    Save ${totalSavings.toFixed(2)}
                   </p>
                 )}
               </div>
