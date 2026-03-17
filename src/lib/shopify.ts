@@ -1,9 +1,9 @@
-const SHOPIFY_DOMAIN = "your-store.myshopify.com";
+const SHOPIFY_DOMAIN = "recova-7175.myshopify.com";
 const STOREFRONT_ACCESS_TOKEN = "your-token-here";
-const API_VERSION = "2026-01";
+const API_VERSION = "2025-01";
 
-const VARIANT_MAP: Record<string, string> = {
-  "neckrelieve-pulse": "gid://shopify/ProductVariant/XXXXXXXXXX",
+const PRODUCT_ID_MAP: Record<string, string> = {
+  "neckrelieve-pulse": "gid://shopify/Product/9320760049922",
 };
 
 interface CartItem {
@@ -14,17 +14,60 @@ interface CartItem {
   image: string;
 }
 
+async function storefrontFetch(query: string, variables?: Record<string, unknown>) {
+  const response = await fetch(
+    `https://${SHOPIFY_DOMAIN}/api/${API_VERSION}/graphql.json`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Shopify-Storefront-Access-Token": STOREFRONT_ACCESS_TOKEN,
+      },
+      body: JSON.stringify({ query, variables }),
+    }
+  );
+  return response.json();
+}
+
+async function getVariantId(productGid: string): Promise<string> {
+  const query = `
+    query getProduct($id: ID!) {
+      product(id: $id) {
+        variants(first: 1) {
+          edges {
+            node {
+              id
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const data = await storefrontFetch(query, { id: productGid });
+  const variantId = data.data?.product?.variants?.edges?.[0]?.node?.id;
+
+  if (!variantId) {
+    throw new Error("Could not find product variant");
+  }
+
+  return variantId;
+}
+
 export async function createCheckout(items: CartItem[]): Promise<string> {
-  const lines = items
-    .map((item) => {
-      const variantId = VARIANT_MAP[item.id];
-      if (!variantId) return null;
+  const lines = await Promise.all(
+    items.map(async (item) => {
+      const productGid = PRODUCT_ID_MAP[item.id];
+      if (!productGid) return null;
+      const variantId = await getVariantId(productGid);
       return {
         merchandiseId: variantId,
         quantity: item.quantity,
       };
     })
-    .filter(Boolean);
+  );
+
+  const validLines = lines.filter(Boolean);
 
   const mutation = `
     mutation cartCreate($input: CartInput!) {
@@ -40,24 +83,9 @@ export async function createCheckout(items: CartItem[]): Promise<string> {
     }
   `;
 
-  const response = await fetch(
-    `https://${SHOPIFY_DOMAIN}/api/${API_VERSION}/graphql.json`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Shopify-Storefront-Access-Token": STOREFRONT_ACCESS_TOKEN,
-      },
-      body: JSON.stringify({
-        query: mutation,
-        variables: {
-          input: { lines },
-        },
-      }),
-    }
-  );
-
-  const data = await response.json();
+  const data = await storefrontFetch(mutation, {
+    input: { lines: validLines },
+  });
 
   if (data.data?.cartCreate?.userErrors?.length > 0) {
     throw new Error(data.data.cartCreate.userErrors[0].message);
