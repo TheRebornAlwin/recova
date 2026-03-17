@@ -1,5 +1,5 @@
 const SHOPIFY_DOMAIN = "recova-7175.myshopify.com";
-const STOREFRONT_ACCESS_TOKEN = "your-token-here";
+const STOREFRONT_ACCESS_TOKEN = "496bc61c93d9e47732f6ba7d2a99a105";
 const API_VERSION = "2025-01";
 
 const PRODUCT_ID_MAP: Record<string, string> = {
