@@ -72,7 +72,7 @@ export default function ProductTabs({ product }: { product: Product }) {
             className="space-y-4"
           >
             <p>
-              Due to high demand, orders may take 2-4 weeks to arrive. We ship
+              Due to extremely high demand, orders may take 1-2 weeks to arrive. We ship
               worldwide with tracking included on every order.
             </p>
             <p>

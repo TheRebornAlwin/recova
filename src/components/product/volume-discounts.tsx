@@ -63,7 +63,7 @@ export default function VolumeDiscounts({
               </div>
               <div className="text-right">
                 <p className="text-sm font-bold text-navy">
-                  ${unitPrice.toFixed(2)}
+                  ${unitPrice.toFixed(2)}{" "}
                   <span className="text-xs font-normal text-muted">each</span>
                 </p>
                 {totalSavings > 0 && (
