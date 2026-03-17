@@ -31,9 +31,6 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
 
         <div className="p-5">
-          <p className="text-xs font-semibold tracking-[0.15em] uppercase text-teal mb-1">
-            {product.category}
-          </p>
           <h3 className="font-bold text-navy text-lg mb-1 group-hover:text-teal transition-colors">
             {product.title}
           </h3>

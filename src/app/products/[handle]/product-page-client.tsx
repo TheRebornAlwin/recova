@@ -133,11 +133,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center md:text-left"
             >
-              {/* Category */}
-              <p className="text-xs font-bold tracking-[0.2em] uppercase text-teal mb-3">
-                {product.category}
-              </p>
-
               {/* Title */}
               <h1 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-navy tracking-tight leading-tight mb-3">
                 {product.title}
