@@ -90,7 +90,7 @@ export default function ProductReviews() {
           <div className="glass-card rounded-2xl p-6 md:p-8 mb-12">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="text-center flex-shrink-0">
-                <div className="text-6xl font-bold text-navy leading-none">
+                <div className="text-5xl sm:text-6xl font-bold text-navy leading-none">
                   {avgRating}
                 </div>
                 <div className="flex justify-center mt-2 mb-1">

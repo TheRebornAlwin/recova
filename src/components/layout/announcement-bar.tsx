@@ -8,7 +8,7 @@ export default function AnnouncementBar() {
   if (!visible) return null;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-teal text-white text-center py-2 px-6 text-sm font-medium">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-teal text-white text-center py-2 px-4 sm:px-6 text-xs sm:text-sm font-medium">
       <span className="font-bold">Free Shipping</span>
       <span className="mx-2 opacity-60">|</span>
       <span>Limited Time Only</span>

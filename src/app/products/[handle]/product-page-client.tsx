@@ -221,7 +221,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
               </div>
 
               {/* Trust Badges */}
-              <div className="grid grid-cols-3 gap-3 mb-8">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-8">
                 {[
                   {
                     label: "Free Shipping",

@@ -10,7 +10,7 @@ export default function ProductShowcase() {
   return (
     <section className="py-24 md:py-36 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <ScrollReveal>
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-teal/10">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-light/20 to-transparent z-10 pointer-events-none" />
