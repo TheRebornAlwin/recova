@@ -9,9 +9,9 @@ export default function AnnouncementBar() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-teal text-white text-center py-2 px-4 sm:px-6 text-xs sm:text-sm font-medium">
-      <span className="font-bold">Free Shipping</span>
+      <span className="font-bold">50% OFF</span>
       <span className="mx-2 opacity-60">|</span>
-      <span>Limited Time Only</span>
+      <span>Free Shipping</span>
       <button
         onClick={() => setVisible(false)}
         className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors cursor-pointer"

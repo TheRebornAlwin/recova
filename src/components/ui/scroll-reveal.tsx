@@ -15,14 +15,14 @@ export default function ScrollReveal({
   children,
   direction = "up",
   delay = 0,
-  duration = 0.6,
+  duration = 0.3,
   className,
 }: ScrollRevealProps) {
   const offsets = {
-    up: { y: 40 },
-    down: { y: -40 },
-    left: { y: 20 },
-    right: { y: 20 },
+    up: { y: 24 },
+    down: { y: -24 },
+    left: { y: 16 },
+    right: { y: 16 },
   };
 
   const offset = offsets[direction];
