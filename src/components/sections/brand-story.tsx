@@ -16,7 +16,7 @@ export default function BrandStory() {
     <section className="py-24 md:py-36 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-          <ScrollReveal className="min-w-0">
+          <ScrollReveal className="min-w-0 text-center md:text-left">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-teal mb-3">
               Our Story
             </p>
@@ -36,9 +36,11 @@ export default function BrandStory() {
               our mission to bring that same professional-grade relief to
               everyone, at a price that makes sense.
             </p>
-            <MagneticButton variant="secondary" href="/about/">
-              Read Our Full Story
-            </MagneticButton>
+            <div className="flex justify-center md:justify-start">
+              <MagneticButton variant="secondary" href="/about/">
+                Read Our Full Story
+              </MagneticButton>
+            </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2} className="min-w-0">

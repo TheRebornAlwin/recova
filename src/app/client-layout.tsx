@@ -2,7 +2,7 @@
 
 import { CartProvider } from "@/contexts/cart-context";
 import LoadingScreen from "@/components/layout/loading-screen";
-import ScrollProgress from "@/components/ui/scroll-progress";
+
 import ParticleField from "@/components/ui/particle-field";
 import AnnouncementBar from "@/components/layout/announcement-bar";
 import Header from "@/components/layout/header";
@@ -17,7 +17,7 @@ export default function ClientLayout({
   return (
     <CartProvider>
       <LoadingScreen />
-      <ScrollProgress />
+
       <ParticleField />
       <div className="relative z-10">
         <AnnouncementBar />

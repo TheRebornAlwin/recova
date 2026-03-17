@@ -24,7 +24,7 @@ export default function ProductShowcase() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.2} className="min-w-0">
+          <ScrollReveal delay={0.2} className="min-w-0 text-center md:text-left">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-teal mb-3">
               Featured Product
             </p>
@@ -36,7 +36,7 @@ export default function ProductShowcase() {
               {heroProduct.description}
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-8 max-w-md mx-auto md:mx-0 md:max-w-none">
               {heroProduct.features.slice(0, 3).map((feature, i) => (
                 <div key={i} className="flex gap-3">
                   <div className="w-8 h-8 rounded-full bg-teal-light/60 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -65,7 +65,7 @@ export default function ProductShowcase() {
               ))}
             </div>
 
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-6 justify-center md:justify-start">
               <span className="text-3xl font-bold text-teal">
                 ${heroProduct.price.toFixed(2)}
               </span>
@@ -83,13 +83,15 @@ export default function ProductShowcase() {
               </span>
             </div>
 
-            <MagneticButton
-              variant="primary"
-              size="lg"
-              href="/products/neckrelieve-pulse/"
-            >
-              Get Yours Now
-            </MagneticButton>
+            <div className="flex justify-center md:justify-start">
+              <MagneticButton
+                variant="primary"
+                size="lg"
+                href="/products/neckrelieve-pulse/"
+              >
+                Get Yours Now
+              </MagneticButton>
+            </div>
           </ScrollReveal>
         </div>
       </div>
