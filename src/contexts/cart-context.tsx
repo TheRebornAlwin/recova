@@ -63,7 +63,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       if (typeof window !== "undefined" && typeof window.fbq === "function") {
         window.fbq("track", "AddToCart", {
           content_name: item.title,
-          content_ids: [item.id],
+          content_ids: ["9320760049922"],
           content_type: "product",
           value: item.price,
           currency: "USD",
