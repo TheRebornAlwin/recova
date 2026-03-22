@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { CartProvider } from "@/contexts/cart-context";
 import LoadingScreen from "@/components/layout/loading-screen";
 
@@ -9,6 +11,18 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import CartDrawer from "@/components/layout/cart-drawer";
 
+function MetaPixelPageView() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      window.fbq("track", "PageView");
+    }
+  }, [pathname]);
+
+  return null;
+}
+
 export default function ClientLayout({
   children,
 }: {
@@ -16,6 +30,7 @@ export default function ClientLayout({
 }) {
   return (
     <CartProvider>
+      <MetaPixelPageView />
       <LoadingScreen />
 
       <ParticleField />
