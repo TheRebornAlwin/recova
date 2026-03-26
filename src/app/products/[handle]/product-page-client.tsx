@@ -133,9 +133,15 @@ export default function ProductPageClient({ product }: { product: Product }) {
               </h1>
 
               {/* Tagline */}
-              <p className="text-slate italic text-base mb-5">
+              <p className="text-slate italic text-base mb-3">
                 {product.tagline}
               </p>
+
+              {/* Rating */}
+              <div className="flex items-center gap-2 mb-5 justify-center md:justify-start">
+                <div className="flex text-warm text-sm">{"★★★★★"}</div>
+                <span className="text-sm text-slate">4.9 (5,860 reviews)</span>
+              </div>
 
               {/* Price */}
               <div className="flex items-center gap-3 mb-2 justify-center md:justify-start flex-wrap">
