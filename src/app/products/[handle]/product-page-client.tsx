@@ -16,6 +16,8 @@ import ScienceSection from "@/components/product/science-section";
 import ProductReviews from "@/components/product/product-reviews";
 import PurchaseNotification from "@/components/product/purchase-notification";
 import CostCallout from "@/components/product/cost-callout";
+import BeforeAfter from "@/components/product/before-after";
+import ValueStack from "@/components/product/value-stack";
 import ProductFAQ from "@/components/product/product-faq";
 
 export default function ProductPageClient({ product }: { product: Product }) {
@@ -129,7 +131,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
             >
               {/* Title */}
               <h1 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-navy tracking-tight leading-tight mb-3">
-                {product.title}
+                Recova&trade; {product.title}
               </h1>
 
               {/* Tagline */}
@@ -141,6 +143,21 @@ export default function ProductPageClient({ product }: { product: Product }) {
               <div className="flex items-center gap-2 mb-5 justify-center md:justify-start">
                 <div className="flex text-warm text-sm">{"★★★★★"}</div>
                 <span className="text-sm text-slate">4.9 (5,860 reviews)</span>
+              </div>
+
+              {/* Core Benefits */}
+              <div className="space-y-2 mb-6 max-w-md mx-auto md:mx-0 text-left">
+                {[
+                  "Wake up without neck stiffness every morning",
+                  "Get through your workday without pain building up",
+                  "Finally stop spending money on temporary fixes",
+                  "Use it anywhere, anytime, with no appointments needed",
+                ].map((benefit, i) => (
+                  <div key={i} className="flex items-start gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span className="text-sm text-navy">{benefit}</span>
+                  </div>
+                ))}
               </div>
 
               {/* Price */}
@@ -268,10 +285,12 @@ export default function ProductPageClient({ product }: { product: Product }) {
       {/* New sections in order */}
       <HowItWorks />
       <EMSComparison />
+      <BeforeAfter />
       <WhoItsFor />
       <ComparisonTable />
       <ScienceSection />
       <CostCallout />
+      <ValueStack />
       <ProductFAQ />
       <ProductReviews />
 
