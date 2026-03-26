@@ -93,20 +93,12 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <AnimatePresence>
-              {showAddToCart && (
-                <motion.button
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                  onClick={handleAddToCart}
-                  className="px-5 py-2 rounded-full bg-teal text-white text-sm font-semibold hover:bg-teal-dark transition-all duration-300 cursor-pointer hover:shadow-[0_4px_16px_rgba(13,148,136,0.3)]"
-                >
-                  {addedToCart ? "Added!" : "Add to Cart"}
-                </motion.button>
-              )}
-            </AnimatePresence>
+            <button
+              onClick={handleAddToCart}
+              className="px-5 py-2 rounded-full bg-teal text-white text-sm font-semibold hover:bg-teal-dark transition-all duration-300 cursor-pointer hover:shadow-[0_4px_16px_rgba(13,148,136,0.3)]"
+            >
+              {addedToCart ? "Added!" : "Add to Cart"}
+            </button>
 
             <button
               onClick={() => setIsOpen(true)}
