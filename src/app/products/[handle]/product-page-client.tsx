@@ -6,13 +6,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Product } from "@/lib/data";
 import { useCart } from "@/contexts/cart-context";
-import TextGradient from "@/components/ui/text-gradient";
-import ScrollReveal from "@/components/ui/scroll-reveal";
-import SectionDivider from "@/components/ui/section-divider";
-import GlassmorphismCard from "@/components/ui/glassmorphism-card";
 import ProductTabs from "@/components/product/product-tabs";
 import VolumeDiscounts from "@/components/product/volume-discounts";
+import HowItWorks from "@/components/product/how-it-works";
+import EMSComparison from "@/components/product/ems-comparison";
+import WhoItsFor from "@/components/product/who-its-for";
+import ComparisonTable from "@/components/product/comparison-table";
+import ScienceSection from "@/components/product/science-section";
 import ProductReviews from "@/components/product/product-reviews";
+import PurchaseNotification from "@/components/product/purchase-notification";
+import StickyCartBar from "@/components/product/sticky-cart-bar";
+import CostCallout from "@/components/product/cost-callout";
 
 export default function ProductPageClient({ product }: { product: Product }) {
   const { addItem } = useCart();
@@ -56,18 +60,8 @@ export default function ProductPageClient({ product }: { product: Product }) {
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}
           <nav className="text-sm text-muted mb-6 md:mb-8 text-center md:text-left">
-            <Link
-              href="/"
-              className="hover:text-teal transition-colors"
-            >
+            <Link href="/" className="hover:text-teal transition-colors">
               Home
-            </Link>
-            <span className="mx-2">/</span>
-            <Link
-              href="/shop/"
-              className="hover:text-teal transition-colors"
-            >
-              Shop
             </Link>
             <span className="mx-2">/</span>
             <span className="text-navy font-medium">{product.title}</span>
@@ -265,43 +259,25 @@ export default function ProductPageClient({ product }: { product: Product }) {
         </div>
       </div>
 
-      <SectionDivider variant="ray" />
-
-      {/* Why You'll Love It */}
-      <section className="py-24 md:py-36 px-6 section-gradient-teal">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-navy tracking-tight">
-                Why You&apos;ll{" "}
-                <TextGradient variant="teal">Love It</TextGradient>
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {product.features.map((feature, i) => (
-              <ScrollReveal key={i} delay={i * 0.08} className="min-w-0">
-                <GlassmorphismCard className="h-full group">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-light to-teal/10 flex items-center justify-center text-teal font-bold text-sm mb-5 group-hover:scale-110 transition-transform duration-300">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <h3 className="font-bold text-navy text-lg mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-slate leading-relaxed">
-                    {feature.description}
-                  </p>
-                </GlassmorphismCard>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <SectionDivider variant="ray" />
-
+      {/* New sections in order */}
+      <HowItWorks />
+      <EMSComparison />
+      <WhoItsFor />
+      <ComparisonTable />
+      <ScienceSection />
+      <CostCallout />
       <ProductReviews />
+
+      {/* Purchase notification popup */}
+      <PurchaseNotification />
+
+      {/* Sticky add to cart bar */}
+      <StickyCartBar
+        productId={product.id}
+        productTitle={product.title}
+        productPrice={product.price}
+        productImage={product.images[0]}
+      />
     </>
   );
 }
