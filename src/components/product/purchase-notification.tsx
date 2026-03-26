@@ -4,16 +4,36 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const notifications = [
-  { name: "Sarah", city: "Austin, TX" },
-  { name: "Marcus", city: "Denver, CO" },
-  { name: "Jessica", city: "Brooklyn, NY" },
-  { name: "David", city: "Portland, OR" },
-  { name: "Emily", city: "Chicago, IL" },
-  { name: "Ryan", city: "San Diego, CA" },
-  { name: "Amanda", city: "Nashville, TN" },
-  { name: "Tyler", city: "Seattle, WA" },
-  { name: "Lauren", city: "Miami, FL" },
-  { name: "Chris", city: "Phoenix, AZ" },
+  { name: "Sarah", city: "Plano, TX" },
+  { name: "Marcus", city: "Littleton, CO" },
+  { name: "Jessica", city: "Hoboken, NJ" },
+  { name: "David", city: "Bend, OR" },
+  { name: "Emily", city: "Naperville, IL" },
+  { name: "Ryan", city: "Carlsbad, CA" },
+  { name: "Amanda", city: "Franklin, TN" },
+  { name: "Tyler", city: "Redmond, WA" },
+  { name: "Lauren", city: "Coral Springs, FL" },
+  { name: "Chris", city: "Gilbert, AZ" },
+  { name: "Megan", city: "Cary, NC" },
+  { name: "Jordan", city: "Beaverton, OR" },
+  { name: "Priya", city: "Alpharetta, GA" },
+  { name: "Derek", city: "Overland Park, KS" },
+  { name: "Olivia", city: "Folsom, CA" },
+  { name: "Hassan", city: "Eagan, MN" },
+  { name: "Sophie", city: "Leesburg, VA" },
+  { name: "Alex", city: "Broken Arrow, OK" },
+  { name: "Tanya", city: "Roswell, GA" },
+  { name: "Brandon", city: "Huntersville, NC" },
+  { name: "Lisa", city: "Westfield, IN" },
+  { name: "Kevin", city: "Cedar Park, TX" },
+  { name: "Nina", city: "Murfreesboro, TN" },
+  { name: "Liam", city: "Bothell, WA" },
+  { name: "Jade", city: "Cheshire, CT" },
+  { name: "Carlos", city: "Katy, TX" },
+  { name: "Anna", city: "Gig Harbor, WA" },
+  { name: "Mike", city: "Papillion, NE" },
+  { name: "Zara", city: "Chandler, AZ" },
+  { name: "Tom", city: "Flower Mound, TX" },
 ];
 
 const timeAgo = [
@@ -55,7 +75,7 @@ export default function PurchaseNotification() {
   }, []);
 
   const notification = notifications[index];
-  const time = timeAgo[index];
+  const time = timeAgo[index % timeAgo.length];
   const initial = notification.name.charAt(0);
 
   return (

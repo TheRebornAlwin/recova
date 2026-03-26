@@ -10,15 +10,15 @@ const Cross = () => (
 );
 
 const rows = [
-  { label: "Price", values: ["$39.99", "$0-50/session", "$15-30", "$60-120/visit"] },
-  { label: "Use it anytime", values: [true, false, true, false] },
-  { label: "Gets deep into the muscle", values: [true, false, false, true] },
-  { label: "Portable", values: [true, false, true, false] },
-  { label: "Works while you do other things", values: [true, false, true, false] },
-  { label: "No recurring costs", values: [true, false, true, false] },
+  { label: "Price", values: ["$39.99", "$0-50/session", "$60-120/visit"] },
+  { label: "Use it anytime", values: [true, false, false] },
+  { label: "Gets deep into the muscle", values: [true, false, true] },
+  { label: "Portable", values: [true, false, false] },
+  { label: "Works while you do other things", values: [true, false, false] },
+  { label: "No recurring costs", values: [true, false, false] },
 ];
 
-const headers = ["NeckRelieve Pulse", "Regular Massage", "Heating Pad", "Chiropractor"];
+const headers = ["NeckRelieve Pulse", "Regular Massage", "Chiropractor"];
 
 export default function ComparisonTable() {
   return (
@@ -35,7 +35,7 @@ export default function ComparisonTable() {
 
         <ScrollReveal>
           <div className="overflow-x-auto min-w-0">
-            <table className="w-full min-w-[600px]">
+            <table className="w-full min-w-[500px]">
               <thead>
                 <tr>
                   <th className="text-left p-4 text-sm font-medium text-slate" />
@@ -78,7 +78,6 @@ export default function ComparisonTable() {
                 <tr>
                   <td className="p-4" />
                   <td className="p-4 bg-teal rounded-b-2xl" />
-                  <td className="p-4" />
                   <td className="p-4" />
                   <td className="p-4" />
                 </tr>

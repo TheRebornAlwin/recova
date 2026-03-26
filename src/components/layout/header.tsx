@@ -16,11 +16,16 @@ const navLinks = [
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [showAddToCart, setShowAddToCart] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { totalItems, setIsOpen } = useCart();
+  const [addedToCart, setAddedToCart] = useState(false);
+  const { totalItems, setIsOpen, addItem } = useCart();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+      setShowAddToCart(window.scrollY > 600);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -35,6 +40,21 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);
+
+  const handleAddToCart = () => {
+    addItem(
+      {
+        id: "neckrelieve-pulse",
+        title: "NeckRelieve Pulse",
+        price: 39.99,
+        image:
+          "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf6VlGUQ9zZFbItUxDBl9n3psJj0Rm1V8iP2ef",
+      },
+      1
+    );
+    setAddedToCart(true);
+    setTimeout(() => setAddedToCart(false), 2000);
+  };
 
   return (
     <>
@@ -73,6 +93,21 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
+            <AnimatePresence>
+              {showAddToCart && (
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                  onClick={handleAddToCart}
+                  className="px-5 py-2 rounded-full bg-teal text-white text-sm font-semibold hover:bg-teal-dark transition-all duration-300 cursor-pointer hover:shadow-[0_4px_16px_rgba(13,148,136,0.3)]"
+                >
+                  {addedToCart ? "Added!" : "Add to Cart"}
+                </motion.button>
+              )}
+            </AnimatePresence>
+
             <button
               onClick={() => setIsOpen(true)}
               className="relative text-navy hover:text-teal transition-colors cursor-pointer"

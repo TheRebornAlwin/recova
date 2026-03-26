@@ -85,7 +85,7 @@ export default function EMSComparison() {
               </div>
               <h3 className="text-xl font-bold text-navy mb-2">EMS Pulse Technology</h3>
               <p className="text-sm text-slate leading-relaxed mb-4">
-                Reaches the muscle directly. Electrical pulses penetrate past the skin surface and into the muscle fibres, triggering natural relaxation and deep tension release.
+                Reaches the muscle directly. Electrical pulses penetrate past the skin surface and into the muscle fibers, triggering natural relaxation and deep tension release.
               </p>
               <div className="flex items-center gap-2 text-teal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>

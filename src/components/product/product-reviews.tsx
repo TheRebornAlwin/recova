@@ -6,7 +6,7 @@ import { reviewsData } from "@/lib/data";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import TextGradient from "@/components/ui/text-gradient";
 
-const REVIEWS_PER_PAGE = 6;
+const REVIEWS_PER_PAGE = 12;
 const MAX_DISPLAY = 36;
 
 function ReviewAvatar({ name }: { name: string }) {
@@ -150,7 +150,7 @@ export default function ProductReviews() {
                 transition={{ duration: 0.4, delay: (i % REVIEWS_PER_PAGE) * 0.05 }}
                 className="min-w-0"
               >
-                <div className="glass-card glass-card-hover rounded-2xl p-5 h-full transition-all duration-300">
+                <div className="bg-white border border-gray-200 rounded-2xl p-5 h-full transition-all duration-300 hover:border-gray-300 hover:shadow-sm">
                   <div className="flex items-start gap-3 mb-3">
                     <ReviewAvatar name={review.name} />
                     <div className="flex-1 min-w-0">

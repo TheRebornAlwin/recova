@@ -15,8 +15,8 @@ import ComparisonTable from "@/components/product/comparison-table";
 import ScienceSection from "@/components/product/science-section";
 import ProductReviews from "@/components/product/product-reviews";
 import PurchaseNotification from "@/components/product/purchase-notification";
-import StickyCartBar from "@/components/product/sticky-cart-bar";
 import CostCallout from "@/components/product/cost-callout";
+import ProductFAQ from "@/components/product/product-faq";
 
 export default function ProductPageClient({ product }: { product: Product }) {
   const { addItem } = useCart();
@@ -266,18 +266,12 @@ export default function ProductPageClient({ product }: { product: Product }) {
       <ComparisonTable />
       <ScienceSection />
       <CostCallout />
+      <ProductFAQ />
       <ProductReviews />
 
       {/* Purchase notification popup */}
       <PurchaseNotification />
 
-      {/* Sticky add to cart bar */}
-      <StickyCartBar
-        productId={product.id}
-        productTitle={product.title}
-        productPrice={product.price}
-        productImage={product.images[0]}
-      />
     </>
   );
 }

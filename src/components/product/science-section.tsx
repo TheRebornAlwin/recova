@@ -21,12 +21,12 @@ export default function ScienceSection() {
               <p className="text-slate leading-relaxed">
                 EMS (Electrical Muscle Stimulation) is the same technology used by
                 physiotherapists, sports recovery professionals, and rehabilitation
-                centres worldwide.
+                centers worldwide.
               </p>
               <p className="text-slate leading-relaxed">
                 It works by sending gentle electrical pulses directly into the muscle
-                fibre. These pulses trigger natural muscle contractions and relaxation
-                cycles — the same process your body uses to release tension, but
+                fiber. These pulses trigger natural muscle contractions and relaxation
+                cycles. It is the same process your body uses to release tension, but
                 targeted and controlled.
               </p>
               <p className="text-slate leading-relaxed">
@@ -56,7 +56,7 @@ export default function ScienceSection() {
                   <span className="text-[10px] font-bold text-teal/60 tracking-wider uppercase">Tissue</span>
                 </div>
                 <div className="absolute inset-x-4 top-[55%] h-[20%] bg-teal/25 rounded-lg flex items-center justify-center">
-                  <span className="text-[10px] font-bold text-teal/80 tracking-wider uppercase">Muscle Fibre</span>
+                  <span className="text-[10px] font-bold text-teal/80 tracking-wider uppercase">Muscle Fiber</span>
                 </div>
 
                 {/* Pulse waves */}
