@@ -12,7 +12,7 @@ export default function ProductTabs({ product }: { product: Product }) {
 
   return (
     <div>
-      <div className="flex border-b border-light-gray">
+      <div className="flex justify-center md:justify-start border-b border-light-gray">
         {tabs.map((tab, i) => (
           <button
             key={tab}
@@ -34,7 +34,7 @@ export default function ProductTabs({ product }: { product: Product }) {
         ))}
       </div>
 
-      <div className="py-6 text-sm text-slate leading-relaxed">
+      <div className="py-6 text-sm text-slate leading-relaxed text-center md:text-left">
         {active === 0 && (
           <motion.ul
             initial={{ opacity: 0, y: 8 }}

@@ -76,7 +76,7 @@ export default function ProductFAQ() {
                   onClick={() => toggle(i)}
                   className="w-full flex items-center justify-between gap-4 p-5 md:p-6 text-left cursor-pointer"
                 >
-                  <span className="text-[15px] font-semibold text-navy leading-snug">
+                  <span className="text-[15px] font-semibold text-navy leading-snug text-center md:text-left">
                     {item.question}
                   </span>
                   <motion.span
@@ -111,7 +111,7 @@ export default function ProductFAQ() {
                       className="overflow-hidden"
                     >
                       <div className="px-5 md:px-6 pb-5 md:pb-6">
-                        <p className="text-sm text-slate leading-relaxed">
+                        <p className="text-sm text-slate leading-relaxed text-center md:text-left">
                           {item.answer}
                         </p>
                       </div>

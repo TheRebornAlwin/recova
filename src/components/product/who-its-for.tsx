@@ -49,11 +49,11 @@ export default function WhoItsFor() {
           {personas.map((p, i) => (
             <ScrollReveal key={i} delay={i * 0.1} className="min-w-0">
               <div className="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-teal/20 transition-all duration-300 h-full group">
-                <div className="w-14 h-14 rounded-2xl bg-teal/5 flex items-center justify-center mb-5 group-hover:bg-teal/10 transition-colors">
+                <div className="w-14 h-14 rounded-2xl bg-teal/5 flex items-center justify-center mb-5 group-hover:bg-teal/10 transition-colors mx-auto md:mx-0">
                   {p.icon}
                 </div>
-                <h3 className="text-lg font-bold text-navy mb-3">{p.title}</h3>
-                <p className="text-sm text-slate leading-relaxed">{p.description}</p>
+                <h3 className="text-lg font-bold text-navy mb-3 text-center md:text-left">{p.title}</h3>
+                <p className="text-sm text-slate leading-relaxed text-center md:text-left">{p.description}</p>
               </div>
             </ScrollReveal>
           ))}

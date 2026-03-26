@@ -42,11 +42,11 @@ export default function EMSComparison() {
                   </div>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-500 mb-2">Heat Pads & Vibration</h3>
-              <p className="text-sm text-gray-400 leading-relaxed mb-4">
+              <h3 className="text-xl font-bold text-gray-500 mb-2 text-center md:text-left">Heat Pads & Vibration</h3>
+              <p className="text-sm text-gray-400 leading-relaxed mb-4 text-center md:text-left">
                 Surface level only. Heat and vibration feel nice temporarily but never reach the deep muscle tissue where tension actually lives.
               </p>
-              <div className="flex items-center gap-2 text-gray-400">
+              <div className="flex items-center gap-2 text-gray-400 justify-center md:justify-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 <span className="text-xs font-medium">Doesn&apos;t reach the muscle</span>
               </div>
@@ -83,11 +83,11 @@ export default function EMSComparison() {
                   </div>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-navy mb-2">EMS Pulse Technology</h3>
-              <p className="text-sm text-slate leading-relaxed mb-4">
+              <h3 className="text-xl font-bold text-navy mb-2 text-center md:text-left">EMS Pulse Technology</h3>
+              <p className="text-sm text-slate leading-relaxed mb-4 text-center md:text-left">
                 Reaches the muscle directly. Electrical pulses penetrate past the skin surface and into the muscle fibers, triggering natural relaxation and deep tension release.
               </p>
-              <div className="flex items-center gap-2 text-teal">
+              <div className="flex items-center gap-2 text-teal justify-center md:justify-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 <span className="text-xs font-bold">Goes directly into the muscle</span>
               </div>

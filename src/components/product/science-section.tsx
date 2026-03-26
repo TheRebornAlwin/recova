@@ -17,7 +17,7 @@ export default function ScienceSection() {
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <ScrollReveal className="min-w-0">
-            <div className="space-y-5">
+            <div className="space-y-5 text-center md:text-left">
               <p className="text-slate leading-relaxed">
                 EMS (Electrical Muscle Stimulation) is the same technology used by
                 physiotherapists, sports recovery professionals, and rehabilitation
@@ -34,7 +34,7 @@ export default function ScienceSection() {
                 reaches the deep muscle tissue where chronic tension from desk work,
                 phone scrolling, and poor posture actually builds up.
               </p>
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap gap-3 pt-2 justify-center md:justify-start">
                 {["Used by Physiotherapists", "Sports Recovery", "Clinically Proven"].map((tag) => (
                   <span key={tag} className="px-4 py-2 rounded-full bg-teal/5 text-teal text-xs font-semibold border border-teal/10">
                     {tag}
