@@ -40,7 +40,7 @@ export default function ProductTabs({ product }: { product: Product }) {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="space-y-2.5"
+            className="space-y-2.5 text-left max-w-md mx-auto md:mx-0"
           >
             {product.specs.map((spec, i) => (
               <li key={i} className="flex items-start gap-3">
