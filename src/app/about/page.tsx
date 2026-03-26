@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import TextGradient from "@/components/ui/text-gradient";
 import GlassmorphismCard from "@/components/ui/glassmorphism-card";
@@ -42,7 +43,13 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-24">
           <ScrollReveal className="min-w-0">
             <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-teal-light/40 to-white border border-teal/10 flex items-center justify-center">
-              <p className="text-sm text-slate">Brand image coming soon</p>
+              <Image
+                src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf4pRa3LfnI5pftsHlKbCS38YwuzArQJ9v1TWO"
+                alt="Recova"
+                width={200}
+                height={200}
+                className="w-32 h-32 md:w-48 md:h-48"
+              />
             </div>
           </ScrollReveal>
 
