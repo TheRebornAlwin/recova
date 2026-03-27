@@ -3,17 +3,17 @@
 import ScrollReveal from "@/components/ui/scroll-reveal";
 
 const benefits = [
-  "Natural Neck and Shoulder Pain Relief",
-  "Reduced Stiffness and Tension",
-  "Better Posture Over Time",
+  "Natural Neck Pain and Stiffness Relief",
+  "Fewer Tension Headaches and Migraines",
+  "Loosen Up After Long Days at a Desk",
   "Deeper, More Restful Sleep",
-  "No More Wasting Money on Temporary Fixes",
+  "No More Spending on Temporary Fixes",
 ];
 
 const conditions = [
   { label: "CHRONIC\nNECK PAIN" },
   { label: "DESK AND\nPHONE STRAIN" },
-  { label: "SHOULDER\nTENSION" },
+  { label: "TENSION\nHEADACHES" },
 ];
 
 export default function BenefitsHero() {
