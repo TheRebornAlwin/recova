@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 
 const benefits = [
@@ -53,17 +54,23 @@ export default function BenefitsHero() {
                 Effective For
               </h2>
 
-              {/* Image placeholder grid */}
-              <div className="grid grid-cols-3 gap-3 mb-4">
+              {/* Main image */}
+              <div className="rounded-2xl overflow-hidden shadow-lg mb-6">
+                <Image
+                  src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf8c3fWIWs4qMzpg3kyZeFh0XQWYPCr7wRbN9V"
+                  alt="Effective for neck pain, desk strain, and tension headaches"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              {/* Condition labels */}
+              <div className="grid grid-cols-3 gap-3">
                 {conditions.map((cond, i) => (
-                  <div key={i} className="flex flex-col items-center gap-3">
-                    <div className="w-full aspect-[3/4] rounded-2xl bg-gradient-to-b from-gray-100 to-gray-50 border border-gray-200 flex items-center justify-center overflow-hidden">
-                      <span className="text-xs text-gray-400 px-2 text-center">Image placeholder</span>
-                    </div>
-                    <p className="text-xs sm:text-sm font-black text-navy uppercase leading-tight tracking-wide whitespace-pre-line text-center">
-                      {cond.label}
-                    </p>
-                  </div>
+                  <p key={i} className="text-xs sm:text-sm font-black text-navy uppercase leading-tight tracking-wide whitespace-pre-line text-center">
+                    {cond.label}
+                  </p>
                 ))}
               </div>
             </div>
