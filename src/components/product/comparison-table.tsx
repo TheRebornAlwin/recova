@@ -72,12 +72,6 @@ export default function ComparisonTable() {
               </div>
             ))}
 
-            {/* Bottom teal bar */}
-            <div className="grid grid-cols-[1fr_1fr_1fr]">
-              <div className="p-2" />
-              <div className="p-2 bg-teal rounded-b-none" />
-              <div className="p-2" />
-            </div>
           </div>
         </ScrollReveal>
       </div>
