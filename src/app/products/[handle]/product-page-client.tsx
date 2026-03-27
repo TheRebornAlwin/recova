@@ -17,6 +17,8 @@ import ProductReviews from "@/components/product/product-reviews";
 import PurchaseNotification from "@/components/product/purchase-notification";
 import CostCallout from "@/components/product/cost-callout";
 import BenefitsHero from "@/components/product/benefits-hero";
+import ReliefIntro from "@/components/product/relief-intro";
+import DiscoverSection from "@/components/product/discover-section";
 import BeforeAfter from "@/components/product/before-after";
 import ValueStack from "@/components/product/value-stack";
 import ProductFAQ from "@/components/product/product-faq";
@@ -285,6 +287,8 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
       {/* New sections in order */}
       <BenefitsHero />
+      <ReliefIntro />
+      <DiscoverSection />
       <HowItWorks />
       <EMSComparison />
       <BeforeAfter />
