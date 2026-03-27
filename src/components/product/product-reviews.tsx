@@ -11,23 +11,10 @@ const MAX_DISPLAY = 36;
 
 function ReviewAvatar({ name }: { name: string }) {
   const initial = name.charAt(0).toUpperCase();
-  const colors = [
-    "bg-teal/10 text-teal",
-    "bg-warm/10 text-warm",
-    "bg-emerald-100 text-emerald-600",
-    "bg-blue-100 text-blue-600",
-    "bg-purple-100 text-purple-600",
-    "bg-rose-100 text-rose-600",
-    "bg-amber-100 text-amber-600",
-    "bg-cyan-100 text-cyan-600",
-  ];
-  const colorIndex =
-    name.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) %
-    colors.length;
 
   return (
     <div
-      className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 ${colors[colorIndex]}`}
+      className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 bg-teal/10 text-teal"
     >
       {initial}
     </div>
