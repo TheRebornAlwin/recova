@@ -16,6 +16,7 @@ import ScienceSection from "@/components/product/science-section";
 import ProductReviews from "@/components/product/product-reviews";
 import PurchaseNotification from "@/components/product/purchase-notification";
 import CostCallout from "@/components/product/cost-callout";
+import BenefitsHero from "@/components/product/benefits-hero";
 import BeforeAfter from "@/components/product/before-after";
 import ValueStack from "@/components/product/value-stack";
 import ProductFAQ from "@/components/product/product-faq";
@@ -283,6 +284,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
       </div>
 
       {/* New sections in order */}
+      <BenefitsHero />
       <HowItWorks />
       <EMSComparison />
       <BeforeAfter />
