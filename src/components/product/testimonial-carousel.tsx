@@ -40,6 +40,46 @@ const testimonials = [
     name: "Brandon C.",
     location: "Portland, United States",
   },
+  {
+    text: "I scroll on my phone way too much and my neck pays the price. Started using this before bed and the soreness I used to wake up with is basically gone. My posture even feels better during the day somehow.",
+    name: "Jenna K.",
+    location: "Vancouver, Canada",
+  },
+  {
+    text: "Honestly did not think a device this small could do anything real. I was wrong. The first time I used it I felt my neck muscles actually relax in a way that stretching never achieved. I use mode 3 on medium intensity and it hits perfectly.",
+    name: "David R.",
+    location: "Chicago, United States",
+  },
+  {
+    text: "I work from home and I realized my neck pain was getting worse every month. A coworker recommended this and I figured why not. Three weeks in and I do not need to take ibuprofen before bed anymore. That alone was worth it.",
+    name: "Priya S.",
+    location: "Calgary, Canada",
+  },
+  {
+    text: "I am a delivery driver and by 3pm my neck is locked up. I keep this in my glovebox and use it on my lunch break. Fifteen minutes and I actually feel human again. Already told three other drivers about it.",
+    name: "Carlos M.",
+    location: "Miami, United States",
+  },
+  {
+    text: "After my car accident two years ago my neck has never been the same. Physical therapy helped but the pain always crept back. This gives me that same relief on demand. I wish I had found it sooner instead of spending thousands on appointments.",
+    name: "Rachel W.",
+    location: "Seattle, United States",
+  },
+  {
+    text: "Bought one for myself and then immediately ordered two more for my parents. My dad has had neck issues for years and he told me this is the first thing that actually helps besides his heating pad. Mom uses it for her upper back tension. Great gift.",
+    name: "Kevin T.",
+    location: "Ottawa, Canada",
+  },
+  {
+    text: "I teach grade school and I am constantly looking down at papers and bending over small desks. The neck strain is real. This thing is a lifesaver after a long day. I put it on while I make dinner and by the time I sit down I feel so much better.",
+    name: "Michelle P.",
+    location: "Nashville, United States",
+  },
+  {
+    text: "I tried one of those expensive neck massager pillows before and it did nothing. This is completely different. You can feel it actually working on the muscles. The different intensity levels are great because I can go lighter when I am just maintaining and stronger when I am really stiff.",
+    name: "James H.",
+    location: "Edmonton, Canada",
+  },
 ];
 
 export default function TestimonialCarousel() {
@@ -60,7 +100,7 @@ export default function TestimonialCarousel() {
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight">
-              Join Our 10,000+ Happy Customers!
+              Join Our 5,000+ Happy Customers!
             </h2>
           </div>
         </ScrollReveal>
