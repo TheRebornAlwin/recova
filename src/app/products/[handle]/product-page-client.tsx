@@ -101,15 +101,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
     <>
       <div className="py-6 md:py-12 px-6">
         <div className="max-w-7xl mx-auto">
-          {/* Breadcrumb */}
-          <nav className="hidden md:block text-sm text-muted mb-6 md:mb-8 text-center md:text-left">
-            <Link href="/" className="hover:text-teal transition-colors">
-              Home
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-navy font-medium">{product.title}</span>
-          </nav>
-
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* LEFT COLUMN: Images */}
 
