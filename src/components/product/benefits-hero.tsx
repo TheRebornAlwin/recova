@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import BrandName from "@/components/ui/brand-name";
 
 const benefits = [
   "Natural Neck Pain and Stiffness Relief",
@@ -34,7 +35,7 @@ export default function BenefitsHero() {
             </p>
             <p className="text-slate leading-relaxed mb-8">
               Today, you have the power to change that. With{" "}
-              <span className="font-bold text-navy">Recova&trade;</span> you can
+              <BrandName tm className="text-navy" /> you can
               experience instant and long-term relief, without medication:
             </p>
             <div className="space-y-3 max-w-md mx-auto md:mx-0">

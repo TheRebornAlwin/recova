@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import BrandName from "@/components/ui/brand-name";
 
 const bulletPoints = [
   "Suffers from neck pain, stiffness, or tension headaches",
@@ -55,7 +56,7 @@ export default function PerfectFor() {
               ))}
             </div>
             <p className="text-slate leading-relaxed mb-5">
-              Then <span className="font-bold text-navy">Recova&trade;</span> is
+              Then <BrandName tm className="text-navy" /> is
               tailor-made for you.
             </p>
             <p className="text-slate leading-relaxed mb-5">

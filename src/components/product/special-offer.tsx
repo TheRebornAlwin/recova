@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import BrandName from "@/components/ui/brand-name";
 
 const bonuses = [
   { name: "4 Extra Gel Pads", wasPrice: "$12.99" },
@@ -31,14 +33,14 @@ export default function SpecialOffer() {
                   Special Offer Today!
                 </h2>
                 <p className="text-slate text-[15px] leading-relaxed mb-4">
-                  Try Recova&trade; NOW Risk-Free at an All Time Low Price.
+                  Try <BrandName tm /> NOW Risk-Free at an All Time Low Price.
                 </p>
               </div>
 
               <p className="text-sm font-bold text-navy mb-3">Act Now and You&apos;ll Get:</p>
               <div className="space-y-2.5 mb-8">
                 {[
-                  "50% OFF Recova\u2122",
+                  <>50% OFF <BrandName tm /></>,
                   "$50 Worth of Free Gifts Included",
                   "30 Day Money Back Guarantee",
                   "FREE Shipping",
@@ -67,9 +69,15 @@ export default function SpecialOffer() {
                 What&apos;s Included:
               </p>
 
-              {/* Product image placeholder */}
-              <div className="w-full aspect-[4/3] rounded-2xl bg-gray-100 border border-gray-200 flex items-center justify-center mb-6">
-                <span className="text-gray-400 text-sm font-medium">Product image</span>
+              {/* Product image */}
+              <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+                <Image
+                  src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfx99oRjb1MPrfg9puSNxnElw5GYkU0mA27yJO"
+                  alt="Recova NeckRelieve Pulse special offer"
+                  width={600}
+                  height={450}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Price display */}

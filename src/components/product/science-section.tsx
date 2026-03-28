@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import BrandName from "@/components/ui/brand-name";
 
 export default function ScienceSection() {
   return (
@@ -14,7 +15,7 @@ export default function ScienceSection() {
               How Does It Work?
             </h2>
             <p className="text-slate leading-relaxed mb-5">
-              <span className="font-bold text-navy">Recova&trade;</span> uses
+              <BrandName tm className="text-navy" /> uses
               advanced EMS (Electrical Muscle Stimulation) technology to send
               gentle, targeted pulses directly into your{" "}
               <span className="font-bold text-navy">neck muscles, relieving
@@ -44,7 +45,7 @@ export default function ScienceSection() {
                 The Science
               </h3>
               <p className="text-lg md:text-xl font-bold text-slate mb-8">
-                Behind <span className="text-teal">Recova&trade;</span> NeckRelieve Pulse
+                Behind <BrandName tm className="text-teal" /> NeckRelieve Pulse
               </p>
 
               <Image

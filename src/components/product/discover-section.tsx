@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import BrandName from "@/components/ui/brand-name";
 
 export default function DiscoverSection() {
   return (
@@ -15,7 +16,7 @@ export default function DiscoverSection() {
               <div className="text-center">
                 <h3 className="text-lg sm:text-xl font-black text-navy uppercase tracking-tight mb-4">
                   Before<br />
-                  <span className="text-gray-400">Recova&trade;</span>
+                  <span className="text-gray-400"><BrandName tm /></span>
                 </h3>
                 <div className="aspect-[3/4] rounded-2xl bg-gradient-to-b from-gray-100 to-gray-50 border border-gray-200 overflow-hidden">
                   <Image
@@ -37,7 +38,7 @@ export default function DiscoverSection() {
               <div className="text-center">
                 <h3 className="text-lg sm:text-xl font-black uppercase tracking-tight mb-4">
                   After<br />
-                  <span className="text-teal">Recova&trade;</span>
+                  <span className="text-teal"><BrandName tm /></span>
                 </h3>
                 <div className="aspect-[3/4] rounded-2xl bg-gradient-to-b from-teal/5 to-teal/10 border border-teal/20 overflow-hidden">
                   <Image
@@ -64,7 +65,7 @@ export default function DiscoverSection() {
               and stiffness never seem to let up.
             </p>
             <p className="text-slate leading-relaxed mb-5">
-              <span className="font-bold text-navy">Enter Recova&trade;</span>,
+              <span className="font-bold text-navy">Enter</span>{" "}<BrandName tm className="text-navy" />,
               a breakthrough EMS neck massager designed for people who are done
               settling for temporary relief. No pills, no appointments, just real
               results.

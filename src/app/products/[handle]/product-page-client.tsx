@@ -26,6 +26,7 @@ import ValueStack from "@/components/product/value-stack";
 import ProductFAQ from "@/components/product/product-faq";
 import SpecialOffer from "@/components/product/special-offer";
 import RiskFreeGuarantee from "@/components/product/risk-free-guarantee";
+import BrandName from "@/components/ui/brand-name";
 
 export default function ProductPageClient({ product }: { product: Product }) {
   const { addItem } = useCart();
@@ -138,7 +139,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
             >
               {/* Title */}
               <h1 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-navy tracking-tight leading-tight mb-3">
-                Recova&trade; {product.title}
+                <BrandName tm /> {product.title}
               </h1>
 
               {/* Tagline */}

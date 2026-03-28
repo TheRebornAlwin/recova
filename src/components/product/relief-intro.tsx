@@ -1,6 +1,7 @@
 "use client";
 
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import BrandName from "@/components/ui/brand-name";
 
 export default function ReliefIntro() {
   return (
@@ -33,7 +34,8 @@ export default function ReliefIntro() {
         <ScrollReveal delay={0.2}>
           <p className="text-slate leading-relaxed">
             <span className="font-bold text-navy">Now you don&apos;t have to.</span>{" "}
-            Recova&trade; has been developed to offer fast and lasting relief in one
+
+            <BrandName tm /> has been developed to offer fast and lasting relief in one
             simple-to-use device that can be used in the comfort of your own home.
           </p>
         </ScrollReveal>
