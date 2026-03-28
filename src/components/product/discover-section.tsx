@@ -11,7 +11,7 @@ export default function DiscoverSection() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left: Before/After visual */}
           <ScrollReveal className="min-w-0">
-            <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-0">
+            <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-1 sm:gap-0">
               {/* Before */}
               <div className="text-center">
                 <h3 className="text-lg sm:text-xl font-bold text-navy tracking-tight mb-4">
