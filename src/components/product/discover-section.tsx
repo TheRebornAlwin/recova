@@ -66,7 +66,7 @@ export default function DiscoverSection() {
               Discover the Easiest and Most Affordable Relief Solution
             </h2>
             <p className="text-slate leading-relaxed mb-5">
-              <span className="font-bold text-navy">Enter</span>{" "}<BrandName tm className="text-navy" /> &mdash;
+              <span className="font-bold text-navy">Enter</span>{" "}<BrandName tm className="text-navy" />,
               a breakthrough EMS neck massager for people who are done settling for
               temporary relief.
             </p>
