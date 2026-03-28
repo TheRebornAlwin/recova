@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -34,6 +34,14 @@ export default function ProductPageClient({ product }: { product: Product }) {
   const [quantity, setQuantity] = useState(1);
   const [selectedTier, setSelectedTier] = useState(0);
   const [addedToCart, setAddedToCart] = useState(false);
+
+  // Preload all product images
+  useEffect(() => {
+    product.images.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, [product.images]);
 
   const tierDiscounts = [0, 10, 20];
   const tierQuantities = [1, 2, 3];

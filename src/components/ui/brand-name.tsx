@@ -6,7 +6,7 @@
  */
 export default function BrandName({ className = "", tm = false }: { className?: string; tm?: boolean }) {
   return (
-    <span className={`tracking-[0.08em] uppercase font-bold ${className}`} style={{ letterSpacing: "0.08em" }}>
+    <span className={`tracking-normal uppercase font-bold ${className}`}>
       RECOV
       <svg
         viewBox="0 0 24 28"
