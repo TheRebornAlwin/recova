@@ -15,7 +15,7 @@ export default function BrandName({ className = "", tm = false }: { className?: 
         className="inline-block"
         style={{ width: "0.7em", height: "0.85em", verticalAlign: "baseline", marginBottom: "-0.02em" }}
       >
-        <path d="M12 0 L24 28 L19.5 28 L15 17 L9 17 L4.5 28 L0 28 Z" />
+        <path d="M12 0 L24 28 L19 28 L12 8 L5 28 L0 28 Z" />
       </svg>
       {tm && <span className="text-[0.5em] align-super ml-0.5">™</span>}
     </span>
