@@ -4,6 +4,7 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import TextGradient from "@/components/ui/text-gradient";
 import GlassmorphismCard from "@/components/ui/glassmorphism-card";
+import BrandName from "@/components/ui/brand-name";
 
 const values = [
   {
@@ -58,7 +59,7 @@ export default function AboutPage() {
               Born from frustration
             </h2>
             <p className="text-slate leading-relaxed mb-4">
-              We started Recova because we were tired of the cycle. Wake up with
+              We started <BrandName /> because we were tired of the cycle. Wake up with
               a stiff neck, push through the day, try a stretch or two, pop some
               Ibuprofen, repeat. Sound familiar?
             </p>

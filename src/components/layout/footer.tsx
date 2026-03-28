@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import BrandName from "@/components/ui/brand-name";
 
 const shopLinks = [
   { href: "/shop/", label: "All Products" },
@@ -36,7 +37,7 @@ export default function Footer() {
                 height={28}
                 className="w-7 h-7 brightness-200"
               />
-              <span className="text-lg font-bold tracking-tight">Recova</span>
+              <span className="text-lg"><BrandName /></span>
             </Link>
             <p className="text-sm text-white/50 leading-relaxed">
               Advanced EMS pulse technology for everyday relief. Feel the
@@ -101,7 +102,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} Recova. All rights reserved.
+            &copy; {new Date().getFullYear()} <BrandName />. All rights reserved.
           </p>
           <div className="flex items-center gap-3 text-xs text-white/40">
             <span>Visa</span>

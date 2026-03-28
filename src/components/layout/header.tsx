@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/contexts/cart-context";
 import { cn } from "@/lib/utils";
+import BrandName from "@/components/ui/brand-name";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -75,8 +76,8 @@ export default function Header() {
               height={32}
               className="w-8 h-8"
             />
-            <span className="text-xl font-bold text-navy tracking-tight">
-              Recova
+            <span className="text-xl text-navy">
+              <BrandName />
             </span>
           </Link>
 

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import BrandName from "@/components/ui/brand-name";
 
 const steps = [
   {
@@ -28,7 +29,7 @@ export default function HowItWorks() {
         <ScrollReveal>
           <div className="text-center mb-14">
             <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight uppercase">
-              How to Use Recova&trade;?
+              How to Use <BrandName tm />?
             </h2>
           </div>
         </ScrollReveal>

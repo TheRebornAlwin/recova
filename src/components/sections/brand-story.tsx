@@ -3,6 +3,7 @@
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import TextGradient from "@/components/ui/text-gradient";
 import AnimatedCounter from "@/components/ui/animated-counter";
+import BrandName from "@/components/ui/brand-name";
 import MagneticButton from "@/components/ui/magnetic-button";
 
 const stats = [
@@ -25,7 +26,7 @@ export default function BrandStory() {
               <TextGradient variant="teal">tired of the pain</TextGradient>
             </h2>
             <p className="text-slate leading-relaxed mb-4">
-              We started Recova because we were frustrated. Frustrated by neck
+              We started <BrandName /> because we were frustrated. Frustrated by neck
               pain that never went away. Frustrated by expensive treatments that
               only worked temporarily. Frustrated by gadgets that promised
               everything and delivered nothing.

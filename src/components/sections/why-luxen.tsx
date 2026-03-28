@@ -3,6 +3,7 @@
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import GlassmorphismCard from "@/components/ui/glassmorphism-card";
 import TextGradient from "@/components/ui/text-gradient";
+import BrandName from "@/components/ui/brand-name";
 
 const values = [
   {
@@ -46,7 +47,7 @@ export default function WhyRecova() {
         <ScrollReveal>
           <div className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-teal mb-3">
-              Why Recova
+              Why <BrandName />
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-navy tracking-tight mb-4">
               Not another <TextGradient variant="teal">gadget</TextGradient>.

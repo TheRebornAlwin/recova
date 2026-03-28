@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import BrandName from "@/components/ui/brand-name";
 
 export default function LoadingScreen() {
   const [show, setShow] = useState(false);
@@ -61,7 +62,7 @@ export default function LoadingScreen() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-2xl font-bold text-navy tracking-tight mb-8"
           >
-            Recova
+            <BrandName />
           </motion.div>
 
           <div className="w-48 h-1 bg-light-gray rounded-full overflow-hidden">
