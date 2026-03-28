@@ -20,7 +20,7 @@ export default function DiscoverSection() {
                 </h3>
                 <div className="aspect-[3/4] rounded-2xl bg-gradient-to-b from-gray-100 to-gray-50 border border-gray-200 overflow-hidden">
                   <Image
-                    src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfyV6GQeSwyRmT5N4UxsjMfXha3kb7JeSpnK9Z"
+                    src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfliEmY86AmfChxDcXdnWLKpN6ZUw9YFPzMa4J"
                     alt="Before Recova"
                     width={300}
                     height={400}
@@ -42,7 +42,7 @@ export default function DiscoverSection() {
                 </h3>
                 <div className="aspect-[3/4] rounded-2xl bg-gradient-to-b from-teal/5 to-teal/10 border border-teal/20 overflow-hidden">
                   <Image
-                    src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfliEmY86AmfChxDcXdnWLKpN6ZUw9YFPzMa4J"
+                    src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfyV6GQeSwyRmT5N4UxsjMfXha3kb7JeSpnK9Z"
                     alt="After Recova"
                     width={300}
                     height={400}
@@ -55,7 +55,7 @@ export default function DiscoverSection() {
 
           {/* Right: Discovery copy */}
           <ScrollReveal delay={0.15} className="min-w-0 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight italic mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-teal tracking-tight mb-6">
               Discover the Easiest and Most Affordable Relief Solution
             </h2>
             <p className="text-slate leading-relaxed mb-5">

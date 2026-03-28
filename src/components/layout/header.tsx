@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import BrandName from "@/components/ui/brand-name";
 
 const navLinks = [
-  { href: "/", label: "Home" },
+  { href: "/home/", label: "Home" },
   { href: "/about/", label: "About" },
   { href: "/faq/", label: "FAQ" },
   { href: "/contact/", label: "Contact" },
@@ -68,7 +68,7 @@ export default function Header() {
         )}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/home/" className="flex items-center gap-2">
             <Image
               src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfN1Yhz2Q3K9iu6wsQxfznUlAa7HOmCWyoSMVq"
               alt="Recova"
