@@ -4,6 +4,13 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import BrandName from "@/components/ui/brand-name";
 
+const discoveryBullets = [
+  "Targets neck pain, stiffness, and tension headaches",
+  "Uses EMS pulse technology trusted by physiotherapists",
+  "Works in minutes, not hours",
+  "Compact enough to use at home, work, or on the go",
+];
+
 export default function DiscoverSection() {
   return (
     <section className="py-20 md:py-28 px-6 bg-gradient-to-b from-gray-50/50 to-white">
@@ -59,22 +66,18 @@ export default function DiscoverSection() {
               Discover the Easiest and Most Affordable Relief Solution
             </h2>
             <p className="text-slate leading-relaxed mb-5">
-              Neck pain is relentless. Whether it is the hours hunched over a
-              laptop, the constant phone scrolling, the stress that sits in your
-              muscles, or just the wear and tear of everyday life, the tightness
-              and stiffness never seem to let up.
+              <span className="font-bold text-navy">Enter</span>{" "}<BrandName tm className="text-navy" /> &mdash;
+              a breakthrough EMS neck massager for people who are done settling for
+              temporary relief.
             </p>
-            <p className="text-slate leading-relaxed mb-5">
-              <span className="font-bold text-navy">Enter</span>{" "}<BrandName tm className="text-navy" />,
-              a breakthrough EMS neck massager designed for people who are done
-              settling for temporary relief.
-            </p>
-            <p className="text-slate leading-relaxed">
-              It has been built using the same EMS pulse technology trusted by
-              physiotherapists and sports recovery professionals, and it is your
-              go-to for instant relief from neck pain, stiffness, tension headaches,
-              and stress, and it works in minutes.
-            </p>
+            <div className="space-y-3 max-w-md mx-auto md:mx-0 text-left">
+              {discoveryBullets.map((point, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span className="text-sm text-navy">{point}</span>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </div>

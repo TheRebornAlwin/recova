@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -29,9 +29,11 @@ import BrandName from "@/components/ui/brand-name";
 export default function ProductPageClient({ product }: { product: Product }) {
   const { addItem } = useCart();
   const [selectedImage, setSelectedImage] = useState(0);
+  const [mobileActiveImage, setMobileActiveImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [selectedTier, setSelectedTier] = useState(0);
   const [addedToCart, setAddedToCart] = useState(false);
+  const [stickyAddedToCart, setStickyAddedToCart] = useState(false);
 
   // Preload all product images
   useEffect(() => {
@@ -66,6 +68,31 @@ export default function ProductPageClient({ product }: { product: Product }) {
     setTimeout(() => setAddedToCart(false), 2000);
   };
 
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
+
+  const handleMobileScroll = useCallback(() => {
+    const container = mobileScrollRef.current;
+    if (!container) return;
+    const scrollLeft = container.scrollLeft;
+    const width = container.clientWidth;
+    const index = Math.round(scrollLeft / width);
+    setMobileActiveImage(index);
+  }, []);
+
+  const handleStickyAddToCart = () => {
+    addItem(
+      {
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        image: product.images[0],
+      },
+      1
+    );
+    setStickyAddedToCart(true);
+    setTimeout(() => setStickyAddedToCart(false), 2000);
+  };
+
   const discountPct = Math.round(
     ((product.compareAtPrice - product.price) / product.compareAtPrice) * 100
   );
@@ -75,7 +102,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
       <div className="py-6 md:py-12 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}
-          <nav className="text-sm text-muted mb-6 md:mb-8 text-center md:text-left">
+          <nav className="hidden md:block text-sm text-muted mb-6 md:mb-8 text-center md:text-left">
             <Link href="/" className="hover:text-teal transition-colors">
               Home
             </Link>
@@ -85,11 +112,71 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* LEFT COLUMN: Images */}
+
+            {/* Mobile: Full-width swipeable images with dots */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="space-y-4 min-w-0"
+              className="md:hidden min-w-0 -mx-6"
+            >
+              <div className="relative">
+                {discountPct > 0 && (
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="absolute top-4 right-4 px-4 py-1.5 bg-teal text-white text-sm font-bold rounded-full z-10 shadow-lg shadow-teal/20"
+                  >
+                    -{discountPct}% OFF
+                  </motion.span>
+                )}
+                <div
+                  ref={mobileScrollRef}
+                  onScroll={handleMobileScroll}
+                  className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+                  style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
+                >
+                  {product.images.map((img, i) => (
+                    <div key={i} className="min-w-full snap-center">
+                      <div className="relative aspect-square bg-gradient-to-br from-teal-light/40 via-white to-teal-light/20 overflow-hidden">
+                        <Image
+                          src={img}
+                          alt={`${product.title} - Image ${i + 1}`}
+                          width={600}
+                          height={600}
+                          className="w-full h-full object-cover"
+                          priority={i === 0}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {/* Dot indicators */}
+                <div className="flex justify-center gap-2 mt-3 pb-1">
+                  {product.images.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => {
+                        mobileScrollRef.current?.scrollTo({ left: i * (mobileScrollRef.current?.clientWidth ?? 0), behavior: "smooth" });
+                      }}
+                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                        mobileActiveImage === i
+                          ? "bg-teal w-4"
+                          : "bg-gray-300"
+                      }`}
+                      aria-label={`Go to image ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Desktop: Original layout with main image + thumbnails */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="hidden md:block space-y-4 min-w-0"
             >
               {/* Main Image */}
               <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-teal-light/40 via-white to-teal-light/20 border border-teal/10 overflow-hidden shadow-lg">
@@ -315,6 +402,24 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
       {/* Purchase notification popup */}
       <PurchaseNotification />
+
+      {/* Sticky mobile Add to Cart bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 shadow-[0_-2px_10px_rgba(0,0,0,0.08)] px-4 py-3">
+        <div className="flex items-center gap-3">
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-semibold text-navy truncate">{product.title}</p>
+            <p className="text-sm font-bold text-teal">${product.price.toFixed(2)}</p>
+          </div>
+          <button
+            onClick={handleStickyAddToCart}
+            className="flex-shrink-0 px-6 h-10 rounded-full font-semibold text-sm bg-teal text-white hover:bg-teal-dark transition-all duration-200 cursor-pointer"
+          >
+            {stickyAddedToCart ? "Added!" : "Add to Cart"}
+          </button>
+        </div>
+      </div>
+      {/* Spacer for sticky bar on mobile */}
+      <div className="h-16 md:hidden" />
 
     </>
   );

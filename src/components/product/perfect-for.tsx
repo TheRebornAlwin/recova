@@ -12,6 +12,12 @@ const bulletPoints = [
   "Experiences stress-related tightness in the neck",
 ];
 
+const benefitBullets = [
+  "Natural relief from the comfort of home",
+  "No expensive medications or therapist visits",
+  "Less neck pain, better sleep, reduced stress",
+];
+
 export default function PerfectFor() {
   return (
     <section className="py-20 md:py-28 px-6 bg-white">
@@ -49,26 +55,23 @@ export default function PerfectFor() {
             </p>
             <div className="space-y-3 mb-8 max-w-md mx-auto md:mx-0 text-left">
               {bulletPoints.map((point, i) => (
-                <div key={i} className="flex items-start gap-2.5">
-                  <span className="text-teal font-bold text-lg leading-none mt-0.5">&#8226;</span>
-                  <span className="text-[15px] text-slate leading-relaxed">{point}</span>
+                <div key={i} className="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span className="text-sm text-navy">{point}</span>
                 </div>
               ))}
             </div>
             <p className="text-slate leading-relaxed mb-5">
-              Then <BrandName tm className="text-navy" /> is
-              tailor-made for you.
+              Then <BrandName tm className="text-navy" /> is tailor-made for you.
             </p>
-            <p className="text-slate leading-relaxed mb-5">
-              This innovative solution offers{" "}
-              <span className="font-bold text-navy">natural relief, right within
-              the comfort of your home.</span> Say goodbye to expensive
-              medications and costly visits to massage therapists.
-            </p>
-            <p className="text-slate leading-relaxed">
-              It is the perfect solution for anyone wanting a life with less neck
-              pain, better sleep, reduced stress, and no more tension headaches.
-            </p>
+            <div className="space-y-3 max-w-md mx-auto md:mx-0 text-left">
+              {benefitBullets.map((point, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span className="text-sm text-navy">{point}</span>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </div>

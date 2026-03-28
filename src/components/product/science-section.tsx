@@ -4,6 +4,13 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import BrandName from "@/components/ui/brand-name";
 
+const scienceBullets = [
+  "Sends electrical pulses directly into muscle fiber",
+  "Triggers natural contraction and relaxation cycles",
+  "Stimulates blood flow and loosens tight muscles",
+  "Same technology used by physiotherapists worldwide",
+];
+
 export default function ScienceSection() {
   return (
     <section className="py-20 md:py-28 px-6 bg-white">
@@ -24,31 +31,22 @@ export default function ScienceSection() {
 
           {/* Right: How it works copy */}
           <ScrollReveal delay={0.15} className="min-w-0 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight mb-4">
               How Does It Work?
             </h2>
-            <p className="text-slate leading-relaxed mb-5">
-              <BrandName tm className="text-navy" /> uses
-              advanced EMS (Electrical Muscle Stimulation) technology to send
-              gentle, targeted pulses directly into your{" "}
-              <span className="font-bold text-navy">neck muscles, relieving
-              tension, stiffness, headaches,</span> and{" "}
-              <span className="font-bold text-navy">more</span>.
+            <p className="text-slate leading-relaxed mb-6">
+              <BrandName tm className="text-navy" /> uses advanced{" "}
+              <span className="font-bold text-navy">EMS (Electrical Muscle Stimulation)</span>{" "}
+              technology to relieve tension, stiffness, and headaches at the source.
             </p>
-            <p className="text-slate leading-relaxed mb-5">
-              The <span className="font-bold text-navy">EMS pulse pads</span>{" "}
-              deliver controlled electrical signals that penetrate past the skin
-              and into the deep muscle fiber, triggering natural contractions and
-              relaxation cycles. This stimulates blood flow, loosens tight
-              muscles, and releases the built-up tension that stretching, heat
-              pads, and painkillers simply cannot reach.
-            </p>
-            <p className="text-slate leading-relaxed">
-              It is the same technology used by physiotherapists and sports
-              recovery professionals around the world, now available in a
-              compact device you can use at home, at work, or anywhere you need
-              relief.
-            </p>
+            <div className="space-y-3 max-w-md mx-auto md:mx-0 text-left">
+              {scienceBullets.map((point, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span className="text-sm text-navy">{point}</span>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </div>
