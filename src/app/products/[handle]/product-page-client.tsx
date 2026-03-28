@@ -274,10 +274,18 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 </span>
               </div>
 
-              {/* Description */}
-              <p className="text-[15px] text-slate leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
-                {product.description}
-              </p>
+              {/* Struggling callout */}
+              <div className="mb-6 mt-2">
+                <h3 className="text-lg font-bold text-navy mb-3 max-w-lg mx-auto md:mx-0">
+                  Struggling with Neck Pain, Stiffness, or Tension Headaches?
+                </h3>
+                <p className="text-[15px] text-slate leading-relaxed mb-4 max-w-lg mx-auto md:mx-0">
+                  The <span className="font-bold text-navy"><BrandName tm /> NeckRelieve Pulse</span> is a new-generation EMS neck massager that uses clinically-proven electrical muscle stimulation to help relieve neck pain, stiffness, tension headaches, and more. It provides real, lasting relief you can feel in minutes.
+                </p>
+                <p className="text-[15px] text-slate leading-relaxed max-w-lg mx-auto md:mx-0">
+                  <span className="font-bold text-navy">Try it for 30 days</span> and if you don&apos;t like it, return it for your money back. <span className="font-bold text-navy">No questions asked.</span>
+                </p>
+              </div>
 
               {/* Volume Discounts */}
               <div className="mb-8">
