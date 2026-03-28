@@ -20,6 +20,7 @@ import BenefitsHero from "@/components/product/benefits-hero";
 import ReliefIntro from "@/components/product/relief-intro";
 import DiscoverSection from "@/components/product/discover-section";
 import PerfectFor from "@/components/product/perfect-for";
+import FeaturesLove from "@/components/product/features-love";
 import BeforeAfter from "@/components/product/before-after";
 import ValueStack from "@/components/product/value-stack";
 import ProductFAQ from "@/components/product/product-faq";
@@ -292,6 +293,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
       <DiscoverSection />
       <ScienceSection />
       <PerfectFor />
+      <FeaturesLove />
       <HowItWorks />
       <EMSComparison />
       <BeforeAfter />
