@@ -14,6 +14,7 @@ import WhoItsFor from "@/components/product/who-its-for";
 import ComparisonTable from "@/components/product/comparison-table";
 import ScienceSection from "@/components/product/science-section";
 import ProductReviews from "@/components/product/product-reviews";
+import TestimonialCarousel from "@/components/product/testimonial-carousel";
 import PurchaseNotification from "@/components/product/purchase-notification";
 import CostCallout from "@/components/product/cost-callout";
 import BenefitsHero from "@/components/product/benefits-hero";
@@ -301,6 +302,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
       <ComparisonTable />
       <CostCallout />
       <ValueStack />
+      <TestimonialCarousel />
       <ProductFAQ />
       <ProductReviews />
 
