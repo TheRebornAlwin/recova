@@ -25,7 +25,7 @@ export const heroProduct: Product = {
   price: 39.99,
   compareAtPrice: 79.99,
   images: [
-    "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf6VlGUQ9zZFbItUxDBl9n3psJj0Rm1V8iP2ef",
+    "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfk0Kw47MguLm6ivMzDEsFxVQ3ahCRKr0yb9T7",
     "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfqu1NTvSANYDXpkLJl8fIBQzm26uxZR9PHiO7",
     "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfyhIs6xSwyRmT5N4UxsjMfXha3kb7JeSpnK9Z",
     "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfqIt4tsANYDXpkLJl8fIBQzm26uxZR9PHiO7o",
