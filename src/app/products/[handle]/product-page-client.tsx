@@ -246,6 +246,19 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 <span className="text-sm text-slate">4.9 (5,860 reviews)</span>
               </div>
 
+              {/* Price */}
+              <div className="flex items-center gap-3 mb-5 justify-center md:justify-start flex-wrap">
+                <span className="text-3xl md:text-4xl font-bold text-teal">
+                  ${product.price.toFixed(2)}
+                </span>
+                <span className="text-xl text-muted line-through">
+                  ${product.compareAtPrice.toFixed(2)}
+                </span>
+                <span className="px-3 py-1 rounded-full bg-teal-light text-teal-dark text-xs font-bold">
+                  SAVE {discountPct}%
+                </span>
+              </div>
+
               {/* Core Benefits */}
               <div className="space-y-2 mb-6 max-w-md mx-auto md:mx-0 text-left">
                 {[
@@ -261,21 +274,8 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 ))}
               </div>
 
-              {/* Price */}
-              <div className="flex items-center gap-3 mb-2 justify-center md:justify-start flex-wrap">
-                <span className="text-3xl md:text-4xl font-bold text-teal">
-                  ${product.price.toFixed(2)}
-                </span>
-                <span className="text-xl text-muted line-through">
-                  ${product.compareAtPrice.toFixed(2)}
-                </span>
-                <span className="px-3 py-1 rounded-full bg-teal-light text-teal-dark text-xs font-bold">
-                  SAVE {discountPct}%
-                </span>
-              </div>
-
               {/* Struggling callout */}
-              <div className="mb-6 mt-2">
+              <div className="border-t border-gray-200 pt-6 mb-6">
                 <h3 className="text-lg font-bold text-navy mb-3 max-w-lg mx-auto md:mx-0">
                   Struggling with Neck Pain, Stiffness, or Tension Headaches?
                 </h3>
