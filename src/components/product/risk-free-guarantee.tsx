@@ -41,6 +41,10 @@ export default function RiskFreeGuarantee() {
                 <strong className="text-navy">
                   24/7/365 Online Email Support
                 </strong>
+                {" "}at{" "}
+                <a href="mailto:shoprecova@gmail.com" className="text-teal hover:underline font-semibold">
+                  shoprecova@gmail.com
+                </a>
                 . Please contact us if you need any assistance.
               </p>
             </div>

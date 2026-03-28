@@ -67,8 +67,7 @@ export default function DiscoverSection() {
             <p className="text-slate leading-relaxed mb-5">
               <span className="font-bold text-navy">Enter</span>{" "}<BrandName tm className="text-navy" />,
               a breakthrough EMS neck massager designed for people who are done
-              settling for temporary relief. No pills, no appointments, just real
-              results.
+              settling for temporary relief.
             </p>
             <p className="text-slate leading-relaxed">
               It has been built using the same EMS pulse technology trusted by

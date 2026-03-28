@@ -10,7 +10,6 @@ import ProductTabs from "@/components/product/product-tabs";
 import VolumeDiscounts from "@/components/product/volume-discounts";
 import HowItWorks from "@/components/product/how-it-works";
 import EMSComparison from "@/components/product/ems-comparison";
-import WhoItsFor from "@/components/product/who-its-for";
 import ComparisonTable from "@/components/product/comparison-table";
 import ScienceSection from "@/components/product/science-section";
 import ProductReviews from "@/components/product/product-reviews";
@@ -306,7 +305,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
       <FeaturesLove />
       <HowItWorks />
       <EMSComparison />
-      <WhoItsFor />
       <ComparisonTable />
       <CostCallout />
       <SpecialOffer />
