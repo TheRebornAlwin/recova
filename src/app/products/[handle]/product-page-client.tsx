@@ -22,7 +22,6 @@ import ReliefIntro from "@/components/product/relief-intro";
 import DiscoverSection from "@/components/product/discover-section";
 import PerfectFor from "@/components/product/perfect-for";
 import FeaturesLove from "@/components/product/features-love";
-import ValueStack from "@/components/product/value-stack";
 import ProductFAQ from "@/components/product/product-faq";
 import SpecialOffer from "@/components/product/special-offer";
 import RiskFreeGuarantee from "@/components/product/risk-free-guarantee";
@@ -311,7 +310,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
       <ComparisonTable />
       <CostCallout />
       <SpecialOffer />
-      <ValueStack />
       <TestimonialCarousel />
       <ProductFAQ />
       <RiskFreeGuarantee />

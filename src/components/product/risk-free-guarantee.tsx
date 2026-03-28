@@ -8,7 +8,7 @@ export default function RiskFreeGuarantee() {
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
           <div className="text-center">
-            <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight uppercase mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight mb-8">
               Try It 100% Risk-Free for 30 Days
             </h2>
 

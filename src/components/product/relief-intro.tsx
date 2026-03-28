@@ -8,7 +8,7 @@ export default function ReliefIntro() {
     <section className="py-20 md:py-28 px-6 bg-white">
       <div className="max-w-3xl mx-auto text-center">
         <ScrollReveal>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-navy tracking-tight uppercase mb-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy tracking-tight mb-8">
             Give Yourself the Relief You Deserve
           </h2>
         </ScrollReveal>

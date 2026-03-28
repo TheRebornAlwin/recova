@@ -29,7 +29,7 @@ export default function FeaturesLove() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left: Features list */}
           <ScrollReveal className="min-w-0 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight uppercase italic mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight italic mb-8">
               Features You&apos;ll Love
             </h2>
             <div className="space-y-5 max-w-lg mx-auto md:mx-0 text-left">

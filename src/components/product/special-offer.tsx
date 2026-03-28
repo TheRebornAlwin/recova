@@ -9,7 +9,6 @@ const bonuses = [
   { name: "8 Massage Modes Included", wasPrice: "$9.99" },
   { name: "19 Intensity Levels", wasPrice: "$14.99" },
   { name: "USB-C Fast Charging Cable", wasPrice: "$7.99" },
-  { name: "Premium Travel Pouch", wasPrice: "$9.95" },
 ];
 
 export default function SpecialOffer() {
@@ -24,7 +23,7 @@ export default function SpecialOffer() {
                 <p className="text-xs font-bold tracking-[0.2em] uppercase text-teal mb-2">
                   Limited Time
                 </p>
-                <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight mb-4">
                   Special Offer Today!
                 </h2>
                 <p className="text-slate text-[15px] leading-relaxed mb-5">
@@ -71,7 +70,7 @@ export default function SpecialOffer() {
 
             {/* RIGHT SIDE */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-black text-navy uppercase tracking-tight mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-navy tracking-tight mb-8">
                 Bonus Today:
               </h3>
 

@@ -11,7 +11,7 @@ export default function ScienceSection() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left: How it works copy */}
           <ScrollReveal className="min-w-0 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight uppercase mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight mb-8">
               How Does It Work?
             </h2>
             <p className="text-slate leading-relaxed mb-5">
@@ -41,13 +41,6 @@ export default function ScienceSection() {
           {/* Right: Custom SVG visualization */}
           <ScrollReveal delay={0.15} className="min-w-0">
             <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-black text-navy uppercase tracking-tight mb-1">
-                The Science
-              </h3>
-              <p className="text-lg md:text-xl font-bold text-slate mb-8">
-                Behind <BrandName tm className="text-teal" /> NeckRelieve Pulse
-              </p>
-
               <Image
                 src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfVjxSwuCcDRq1IaUousEkQV5YgOpbLT7hxeNm"
                 alt="The science behind Recova NeckRelieve Pulse - EMS technology"

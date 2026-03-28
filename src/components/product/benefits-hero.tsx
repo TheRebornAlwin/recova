@@ -25,7 +25,7 @@ export default function BenefitsHero() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: Benefits copy */}
           <ScrollReveal className="min-w-0 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight mb-6 uppercase">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight mb-6">
               The Benefits:
             </h2>
             <p className="text-slate leading-relaxed mb-4">
@@ -51,7 +51,7 @@ export default function BenefitsHero() {
           {/* Right: Effective For visual */}
           <ScrollReveal delay={0.15} className="min-w-0">
             <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-black text-teal tracking-tight mb-8 uppercase">
+              <h2 className="text-3xl md:text-4xl font-bold text-teal tracking-tight mb-8">
                 Effective For
               </h2>
 

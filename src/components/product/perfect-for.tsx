@@ -20,10 +20,10 @@ export default function PerfectFor() {
           {/* Left: Perfect For images */}
           <ScrollReveal className="min-w-0">
             <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-black text-teal uppercase tracking-tight mb-1">
+              <h2 className="text-3xl md:text-4xl font-bold text-teal tracking-tight mb-1">
                 Perfect For
               </h2>
-              <p className="text-xl md:text-2xl font-bold text-navy uppercase tracking-tight mb-8">
+              <p className="text-xl md:text-2xl font-bold text-navy tracking-tight mb-8">
                 People Who Are:
               </p>
 
@@ -41,7 +41,7 @@ export default function PerfectFor() {
 
           {/* Right: Who is it for copy */}
           <ScrollReveal delay={0.15} className="min-w-0 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight uppercase mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight mb-6">
               Who Is It For?
             </h2>
             <p className="text-slate leading-relaxed mb-5">

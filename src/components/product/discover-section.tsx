@@ -14,7 +14,7 @@ export default function DiscoverSection() {
             <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-0">
               {/* Before */}
               <div className="text-center">
-                <h3 className="text-lg sm:text-xl font-black text-navy uppercase tracking-tight mb-4">
+                <h3 className="text-lg sm:text-xl font-bold text-navy tracking-tight mb-4">
                   Before<br />
                   <span className="text-gray-400"><BrandName tm /></span>
                 </h3>
@@ -36,7 +36,7 @@ export default function DiscoverSection() {
 
               {/* After */}
               <div className="text-center">
-                <h3 className="text-lg sm:text-xl font-black uppercase tracking-tight mb-4">
+                <h3 className="text-lg sm:text-xl font-bold tracking-tight mb-4">
                   After<br />
                   <span className="text-teal"><BrandName tm /></span>
                 </h3>
@@ -55,7 +55,7 @@ export default function DiscoverSection() {
 
           {/* Right: Discovery copy */}
           <ScrollReveal delay={0.15} className="min-w-0 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight uppercase italic mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight italic mb-6">
               Discover the Easiest and Most Affordable Relief Solution
             </h2>
             <p className="text-slate leading-relaxed mb-5">

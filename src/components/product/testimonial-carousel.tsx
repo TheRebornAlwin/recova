@@ -99,7 +99,7 @@ export default function TestimonialCarousel() {
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight">
               Join Our 5,000+ Happy Customers!
             </h2>
           </div>

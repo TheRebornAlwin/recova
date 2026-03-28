@@ -28,7 +28,7 @@ export default function HowItWorks() {
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <h2 className="text-2xl md:text-3xl font-black text-navy tracking-tight uppercase">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy tracking-tight">
               How to Use <BrandName tm />?
             </h2>
           </div>
