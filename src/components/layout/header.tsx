@@ -70,7 +70,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pf4pRa3LfnI5pftsHlKbCS38YwuzArQJ9v1TWO"
+              src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfN1Yhz2Q3K9iu6wsQxfznUlAa7HOmCWyoSMVq"
               alt="Recova"
               width={32}
               height={32}
