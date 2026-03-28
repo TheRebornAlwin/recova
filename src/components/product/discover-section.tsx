@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 
 export default function DiscoverSection() {
@@ -9,33 +10,43 @@ export default function DiscoverSection() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left: Before/After visual */}
           <ScrollReveal className="min-w-0">
-            <div className="grid grid-cols-2 gap-0 relative">
-              {/* Without */}
+            <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-0">
+              {/* Before */}
               <div className="text-center">
                 <h3 className="text-lg sm:text-xl font-black text-navy uppercase tracking-tight mb-4">
-                  Without<br />
+                  Before<br />
                   <span className="text-gray-400">Recova&trade;</span>
                 </h3>
-                <div className="aspect-[3/4] rounded-l-2xl bg-gradient-to-b from-gray-100 to-gray-50 border border-gray-200 border-r-0 flex items-center justify-center overflow-hidden">
-                  <span className="text-xs text-gray-400 px-4 text-center">Before image</span>
+                <div className="aspect-[3/4] rounded-2xl bg-gradient-to-b from-gray-100 to-gray-50 border border-gray-200 overflow-hidden">
+                  <Image
+                    src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfyV6GQeSwyRmT5N4UxsjMfXha3kb7JeSpnK9Z"
+                    alt="Before Recova"
+                    width={300}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
               {/* Arrow */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 mt-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-teal shadow-lg shadow-teal/20 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </div>
+              <div className="flex items-center justify-center px-2 mt-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </div>
 
-              {/* With */}
+              {/* After */}
               <div className="text-center">
                 <h3 className="text-lg sm:text-xl font-black uppercase tracking-tight mb-4">
-                  With<br />
+                  After<br />
                   <span className="text-teal">Recova&trade;</span>
                 </h3>
-                <div className="aspect-[3/4] rounded-r-2xl bg-gradient-to-b from-teal/5 to-teal/10 border border-teal/20 border-l-0 flex items-center justify-center overflow-hidden">
-                  <span className="text-xs text-teal/50 px-4 text-center">After image</span>
+                <div className="aspect-[3/4] rounded-2xl bg-gradient-to-b from-teal/5 to-teal/10 border border-teal/20 overflow-hidden">
+                  <Image
+                    src="https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfliEmY86AmfChxDcXdnWLKpN6ZUw9YFPzMa4J"
+                    alt="After Recova"
+                    width={300}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -53,8 +64,8 @@ export default function DiscoverSection() {
               and stiffness never seem to let up.
             </p>
             <p className="text-slate leading-relaxed mb-5">
-              <span className="font-bold text-navy">Enter Recova&trade;</span>{" "}
-              , a breakthrough EMS neck massager designed for people who are done
+              <span className="font-bold text-navy">Enter Recova&trade;</span>,
+              a breakthrough EMS neck massager designed for people who are done
               settling for temporary relief. No pills, no appointments, just real
               results.
             </p>

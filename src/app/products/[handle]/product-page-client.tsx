@@ -19,6 +19,7 @@ import CostCallout from "@/components/product/cost-callout";
 import BenefitsHero from "@/components/product/benefits-hero";
 import ReliefIntro from "@/components/product/relief-intro";
 import DiscoverSection from "@/components/product/discover-section";
+import PerfectFor from "@/components/product/perfect-for";
 import BeforeAfter from "@/components/product/before-after";
 import ValueStack from "@/components/product/value-stack";
 import ProductFAQ from "@/components/product/product-faq";
@@ -289,12 +290,13 @@ export default function ProductPageClient({ product }: { product: Product }) {
       <BenefitsHero />
       <ReliefIntro />
       <DiscoverSection />
+      <ScienceSection />
+      <PerfectFor />
       <HowItWorks />
       <EMSComparison />
       <BeforeAfter />
       <WhoItsFor />
       <ComparisonTable />
-      <ScienceSection />
       <CostCallout />
       <ValueStack />
       <ProductFAQ />
