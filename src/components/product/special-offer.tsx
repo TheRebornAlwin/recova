@@ -79,12 +79,8 @@ export default function SpecialOffer() {
 
               <div className="space-y-6 mb-10">
                 {bonuses.map((bonus, i) => (
-                  <div key={i} className="flex items-center gap-5 p-4 rounded-2xl bg-white border border-gray-100 shadow-sm">
-                    {/* Circle image placeholder */}
-                    <div className="w-16 h-16 rounded-full bg-gray-100 flex-shrink-0 flex items-center justify-center border border-gray-200">
-                      <span className="text-gray-400 text-xs font-bold">{i + 1}</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
+                  <div key={i} className="p-4 rounded-2xl bg-white border border-gray-100 shadow-sm">
+                    <div>
                       <p className="text-base font-bold text-navy mb-1">{bonus.name}</p>
                       <div className="flex items-center gap-3">
                         <span className="text-sm text-gray-400 line-through">{bonus.wasPrice}</span>
