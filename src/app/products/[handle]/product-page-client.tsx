@@ -60,7 +60,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         id: product.id,
         title: product.title,
         price: effectivePrice,
-        image: product.images[0],
+        image: "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfYGGXmjQprURFslGVNnPC7ftSqpI5QW6AK489",
       },
       quantity * effectiveQty
     );
@@ -85,7 +85,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         id: product.id,
         title: product.title,
         price: product.price,
-        image: product.images[0],
+        image: "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfYGGXmjQprURFslGVNnPC7ftSqpI5QW6AK489",
       },
       1
     );
