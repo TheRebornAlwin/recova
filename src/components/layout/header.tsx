@@ -49,7 +49,7 @@ export default function Header() {
         title: "NeckRelieve Pulse",
         price: 39.99,
         image:
-          "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfYGGXmjQprURFslGVNnPC7ftSqpI5QW6AK489",
+          "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfegBNepm5SKDuf4CUMsBOTcyEJkPbFvgL8lq7",
       },
       1
     );

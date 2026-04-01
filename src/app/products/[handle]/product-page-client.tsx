@@ -41,6 +41,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
       const img = new window.Image();
       img.src = src;
     });
+    // Preload cart thumbnail
+    const cartImg = new window.Image();
+    cartImg.src = "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfegBNepm5SKDuf4CUMsBOTcyEJkPbFvgL8lq7";
   }, [product.images]);
 
   const tierDiscounts = [0, 10, 20];
@@ -60,7 +63,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         id: product.id,
         title: product.title,
         price: effectivePrice,
-        image: "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfYGGXmjQprURFslGVNnPC7ftSqpI5QW6AK489",
+        image: "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfegBNepm5SKDuf4CUMsBOTcyEJkPbFvgL8lq7",
       },
       quantity * effectiveQty
     );
@@ -85,7 +88,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         id: product.id,
         title: product.title,
         price: product.price,
-        image: "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfYGGXmjQprURFslGVNnPC7ftSqpI5QW6AK489",
+        image: "https://xp3x50z315.ufs.sh/f/4WAjKEfnI5pfegBNepm5SKDuf4CUMsBOTcyEJkPbFvgL8lq7",
       },
       1
     );
