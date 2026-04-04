@@ -32,7 +32,7 @@ export default function FeaturesLove() {
             <h2 className="text-2xl md:text-3xl font-bold text-teal tracking-tight mb-8">
               Features You&apos;ll Love
             </h2>
-            <div className="space-y-5 max-w-[280px] sm:max-w-sm mx-auto md:mx-0 text-left">
+            <div className="space-y-5 max-w-lg mx-auto md:mx-0 text-left">
               {features.map((f, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>

@@ -292,7 +292,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
               </div>
 
               {/* Core Benefits */}
-              <div className="space-y-2 mb-6 max-w-[280px] sm:max-w-sm mx-auto md:mx-0 text-left">
+              <div className="space-y-2 mb-6 max-w-md mx-auto md:mx-0 text-left">
                 {[
                   "Wake up without neck stiffness every morning",
                   "Get through your workday without pain building up",
