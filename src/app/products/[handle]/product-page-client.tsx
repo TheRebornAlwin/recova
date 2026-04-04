@@ -340,7 +340,45 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 </button>
               </div>
 
-              {/* Trust Badges */}
+              {/* Benefit Badges */}
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-8">
+                {[
+                  {
+                    label: "Relieve",
+                    sublabel: "Neck Pain",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    ),
+                  },
+                  {
+                    label: "Reduce",
+                    sublabel: "Headaches",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                    ),
+                  },
+                  {
+                    label: "Sleep",
+                    sublabel: "Better",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    ),
+                  },
+                ].map((badge) => (
+                  <div
+                    key={badge.label}
+                    className="text-center py-4 rounded-2xl bg-teal/5 border border-teal/10"
+                  >
+                    <div className="flex justify-center mb-2">{badge.icon}</div>
+                    <p className="text-xs font-bold text-navy leading-tight">
+                      {badge.label}
+                    </p>
+                    <p className="text-[10px] text-teal font-semibold">{badge.sublabel}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Trust Badges (moved down) */}
               <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-8">
                 {[
                   {
