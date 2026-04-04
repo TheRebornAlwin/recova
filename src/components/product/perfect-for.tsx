@@ -55,10 +55,9 @@ export default function PerfectFor() {
             </p>
             <div className="flex flex-col items-center md:items-start space-y-3 mb-8">
               {bulletPoints.map((point, i) => (
-                <div key={i} className="inline-flex items-start gap-3 max-w-[90%] md:max-w-none">
-                  <div className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-2" />
-                  <span className="text-sm text-navy">{point}</span>
-                </div>
+                <p key={i} className="text-sm text-navy max-w-[90%] md:max-w-none">
+                  <span className="text-teal mr-2">&#8226;</span>{point}
+                </p>
               ))}
             </div>
             <p className="text-slate leading-relaxed mb-5">
