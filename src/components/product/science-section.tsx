@@ -39,7 +39,7 @@ export default function ScienceSection() {
               <span className="font-bold text-navy">EMS (Electrical Muscle Stimulation)</span>{" "}
               technology to relieve tension, stiffness, and headaches at the source.
             </p>
-            <div className="space-y-3 max-w-md mx-auto md:mx-0 text-left">
+            <div className="space-y-3 inline-block text-left md:block">
               {scienceBullets.map((point, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-2" />

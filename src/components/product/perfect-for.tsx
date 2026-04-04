@@ -53,7 +53,7 @@ export default function PerfectFor() {
             <p className="text-slate leading-relaxed mb-5">
               If you are someone who:
             </p>
-            <div className="space-y-3 mb-8 max-w-md mx-auto md:mx-0 text-left">
+            <div className="space-y-3 mb-8 inline-block text-left md:block">
               {bulletPoints.map((point, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-2" />
@@ -64,7 +64,7 @@ export default function PerfectFor() {
             <p className="text-slate leading-relaxed mb-5">
               Then <BrandName tm className="text-navy" /> is tailor-made for you.
             </p>
-            <div className="space-y-3 max-w-md mx-auto md:mx-0 text-left">
+            <div className="space-y-3 inline-block text-left md:block">
               {benefitBullets.map((point, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
