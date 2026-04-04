@@ -70,7 +70,7 @@ export default function DiscoverSection() {
               a breakthrough EMS neck massager for people who are done settling for
               temporary relief.
             </p>
-            <div className="space-y-3 inline-block text-left md:block">
+            <div className="space-y-3 w-fit mx-auto md:mx-0 text-left">
               {discoveryBullets.map((point, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-2" />
