@@ -41,7 +41,7 @@ export default function ScienceSection() {
             </p>
             <div className="flex flex-col items-center md:items-start space-y-3">
               {scienceBullets.map((point, i) => (
-                <div key={i} className="inline-flex items-start gap-3">
+                <div key={i} className="inline-flex items-start gap-3 max-w-full">
                   <div className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-2" />
                   <span className="text-sm text-navy">{point}</span>
                 </div>
