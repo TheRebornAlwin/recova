@@ -25,7 +25,7 @@ export default function ReliefIntro() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-          <div className="space-y-3 mb-8 max-w-sm mx-auto md:mx-0 md:max-w-none">
+          <div className="space-y-3 mb-8 px-6 md:px-0">
             {painPoints.map((point, i) => (
               <div key={i} className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-2" />
