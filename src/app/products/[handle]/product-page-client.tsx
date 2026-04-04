@@ -292,14 +292,14 @@ export default function ProductPageClient({ product }: { product: Product }) {
               </div>
 
               {/* Core Benefits */}
-              <div className="space-y-2 mb-6 px-6 md:px-0">
+              <div className="flex flex-col items-center md:items-start space-y-2 mb-6">
                 {[
                   "Wake up without neck stiffness every morning",
                   "Get through your workday without pain building up",
                   "Finally stop spending money on temporary fixes",
                   "Use it anywhere, anytime, with no appointments needed",
                 ].map((benefit, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
+                  <div key={i} className="inline-flex items-start gap-2.5 max-w-[90%] md:max-w-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
                     <span className="text-sm text-navy">{benefit}</span>
                   </div>
